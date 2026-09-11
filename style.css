@@ -206,6 +206,8 @@ a {
 
     display: flex;
     gap: 14px;
+
+    z-index: 2;
 }
 
 .hero-buttons a {
@@ -257,14 +259,34 @@ a {
 
 @media (max-width: 768px) {
 
+    .hero {
+        width: 100%;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
     .hero-buttons {
-        left: 7%;
-        right: 7%;
-        bottom: 25px;
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        width: auto;
+        margin: -55px 7% 30px;
 
         display: flex;
         flex-direction: column;
         gap: 12px;
+
+        z-index: 2;
     }
 
     .hero-buttons a {
@@ -273,6 +295,7 @@ a {
         box-sizing: border-box;
 
         padding: 15px 18px;
+
         font-size: 13px;
     }
 }
