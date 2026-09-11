@@ -172,7 +172,139 @@ a {
 
     transform: translateY(-2px);
 }
+/* ====================
+   MOBILE HEADER
+==================== */
 
+.menu-button {
+    display: none;
+}
+
+
+/* スマホ */
+
+@media (max-width: 768px) {
+
+    .header {
+        height: 72px;
+        padding: 0 5%;
+        justify-content: space-between;
+    }
+
+
+    /* ロゴ */
+
+    .logo {
+        min-width: 0;
+    }
+
+    .logo img {
+        width: 120px;
+        height: auto;
+        display: block;
+    }
+
+
+    /* PCナビを隠す */
+
+    .navigation {
+        display: none;
+    }
+
+
+    /* EduMarketボタンを隠す */
+
+    .edumarket-button {
+        display: none;
+    }
+
+
+    /* ハンバーガーボタン */
+
+    .menu-button {
+        display: flex;
+
+        width: 42px;
+        height: 42px;
+
+        padding: 0;
+
+        border: none;
+        background: transparent;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        gap: 6px;
+
+        cursor: pointer;
+    }
+
+
+    .menu-button span {
+        display: block;
+
+        width: 24px;
+        height: 1.5px;
+
+        background: #17201c;
+
+        transition: 0.3s ease;
+    }
+
+
+    /* モバイルメニュー */
+
+    .mobile-menu {
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+
+        width: 100%;
+
+        padding: 25px 7% 30px;
+
+        box-sizing: border-box;
+
+        background: #ffffff;
+
+        border-top: 1px solid #eeeeee;
+        border-bottom: 1px solid #dddddd;
+
+        display: none;
+
+        flex-direction: column;
+
+        z-index: 20;
+    }
+
+
+    .mobile-menu a {
+        padding: 16px 0;
+
+        border-bottom: 1px solid #eeeeee;
+
+        font-family: sans-serif;
+        font-size: 14px;
+
+        color: #333;
+    }
+
+
+    .mobile-menu a:last-child {
+        border-bottom: none;
+    }
+
+
+    /* メニューを開いた状態 */
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+}
 
 /* ====================
    HERO
