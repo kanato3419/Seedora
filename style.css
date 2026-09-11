@@ -1872,47 +1872,61 @@ a {
     }
 
 
-    /* ====================
-       MISSION
-    ==================== */
+   /* ====================
+   MISSION
+==================== */
 
-    .mission {
-        display: block;
-        width: 100%;
-    }
+.mission {
+    display: block;
+    width: 100%;
+}
 
-    .mission-content {
-        width: 100%;
-        padding: 75px 7% 60px;
-        box-sizing: border-box;
-    }
+.mission-content {
+    width: 100%;
+    padding: 75px 7% 60px;
+    box-sizing: border-box;
+}
 
-    .mission h2 {
-        font-size: 34px;
-        line-height: 1.7;
-        margin-bottom: 30px;
-    }
+.mission h2 {
+    font-size: 34px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
 
-    .mission-text {
-        margin: 0 0 35px;
-        padding: 0;
-        font-size: 14px;
-        line-height: 2.2;
-    }
-
-    .mission-image {
-        width: 100%;
-        height: 280px;
-        aspect-ratio: auto;
-    }
-
-    .mission-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.mission-text {
+    margin: 0 0 35px;
+    padding: 0;
+    font-size: 14px;
+    line-height: 2.2;
+}
 
 
+/* Mission画像 */
+
+.mission-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+}
+
+.mission-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* Mission → Values の余白 */
+
+.mission {
+    padding-bottom: 90px;
+}
+
+.values {
+    padding-top: 90px;
+}
     /* ====================
        VALUES
     ==================== */
