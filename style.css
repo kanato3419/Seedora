@@ -259,9 +259,24 @@ a {
 @media (max-width: 768px) {
 
     .hero {
-        width: 100%;
-        margin: 0;
+        position: relative;
+
+        width: 100vw;
+        max-width: none;
+
+        margin-left: calc(50% - 50vw);
+        margin-right: 0;
+
         padding: 0;
+
+        aspect-ratio: 1122 / 1402;
+
+        background-image: url("images/hero-mobile.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center top;
+
+        overflow: hidden;
     }
 
     .hero-image {
@@ -281,12 +296,12 @@ a {
     }
 
     .hero-buttons {
-        position: relative;
-        left: auto;
-        bottom: auto;
+        position: absolute;
 
-        margin: -55px 7% 30px;
-        
+        left: 7%;
+        right: 7%;
+        bottom: 25px;
+
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -298,22 +313,10 @@ a {
         width: 100%;
         min-width: 0;
         box-sizing: border-box;
+
         padding: 15px 18px;
         font-size: 13px;
     }
-}
-html,
-body {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-main {
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 /* ====================
    MISSION
