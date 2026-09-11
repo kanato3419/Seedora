@@ -29,11 +29,10 @@ a {
 ==================== */
 
 .header {
-
+    width: 100%;
     height: 72px;
 
     display: flex;
-
     align-items: center;
 
     padding: 0 5%;
@@ -41,79 +40,36 @@ a {
     background: #ffffff;
 
     position: relative;
+    z-index: 100;
 
-    z-index: 10;
+    box-sizing: border-box;
 }
 
 
-/* LOGO */
+/* ====================
+   LOGO
+==================== */
 
 .logo {
-
     display: flex;
-
     align-items: center;
 
-    min-width: 250px;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: 170px;
+    height: auto;
 }
 
 
-.logo-mark {
-
-    width: 42px;
-
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 36px;
-
-    font-weight: bold;
-
-    color: #4d8c68;
-}
-
-
-.logo-text {
-
-    display: flex;
-
-    flex-direction: column;
-
-    margin-left: 8px;
-}
-
-
-.logo-text span {
-
-    font-size: 23px;
-
-    letter-spacing: 2px;
-}
-
-
-.logo-text small {
-
-    font-family: sans-serif;
-
-    font-size: 8px;
-
-    color: #777;
-
-    margin-top: 2px;
-}
-
-
-/* NAVIGATION */
+/* ====================
+   NAVIGATION
+==================== */
 
 .navigation {
-
     display: flex;
-
     align-items: center;
 
     gap: 30px;
@@ -123,28 +79,28 @@ a {
 
 
 .navigation a {
-
     font-family: sans-serif;
-
     font-size: 12px;
 
-    transition: 0.3s;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
 }
 
 
 .navigation a:hover {
-
     color: #39815d;
 }
 
 
-/* EDUMARKET BUTTON */
+/* ====================
+   EDUMARKET BUTTON
+==================== */
 
 .edumarket-button {
-
     display: flex;
-
     align-items: center;
+    justify-content: space-between;
 
     gap: 25px;
 
@@ -155,152 +111,102 @@ a {
     border-radius: 30px;
 
     background: #397c5b;
-
     color: white;
 
     font-family: sans-serif;
-
     font-size: 12px;
 
-    transition: 0.3s;
+    white-space: nowrap;
+
+    transition: 0.3s ease;
 }
 
 
 .edumarket-button:hover {
-
     background: #285e43;
-
     transform: translateY(-2px);
 }
+
+
+.edumarket-button span {
+    font-size: 16px;
+}
+
+
 /* ====================
-   MOBILE HEADER
+   MOBILE MENU BUTTON
 ==================== */
 
 .menu-button {
     display: none;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
 }
 
 
-/* スマホ */
+.menu-button span {
+    display: block;
+
+    width: 22px;
+    height: 1px;
+
+    background: #333;
+}
+
+
+/* ====================
+   MOBILE
+==================== */
 
 @media (max-width: 768px) {
 
     .header {
         height: 72px;
+
         padding: 0 5%;
+
         justify-content: space-between;
     }
 
 
     /* ロゴ */
 
-    .logo {
-        min-width: 0;
-    }
-
     .logo img {
-        width: 120px;
-        height: auto;
-        display: block;
+        width: 145px;
     }
 
 
-    /* PCナビを隠す */
+    /* PCナビを消す */
 
     .navigation {
         display: none;
     }
 
 
-    /* EduMarketボタンを隠す */
+    /* PCのEduMarketボタンを消す */
 
     .edumarket-button {
         display: none;
     }
 
 
-    /* ハンバーガーボタン */
+    /* ハンバーガーを表示 */
 
     .menu-button {
-        display: flex;
-
-        width: 42px;
-        height: 42px;
-
-        padding: 0;
-
-        border: none;
-        background: transparent;
-
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-        gap: 6px;
-
-        cursor: pointer;
-    }
-
-
-    .menu-button span {
-        display: block;
-
-        width: 24px;
-        height: 1.5px;
-
-        background: #17201c;
-
-        transition: 0.3s ease;
-    }
-
-
-    /* モバイルメニュー */
-
-    .mobile-menu {
-        position: absolute;
-
-        top: 72px;
-        left: 0;
-
-        width: 100%;
-
-        padding: 25px 7% 30px;
-
-        box-sizing: border-box;
-
-        background: #ffffff;
-
-        border-top: 1px solid #eeeeee;
-        border-bottom: 1px solid #dddddd;
-
-        display: none;
-
-        flex-direction: column;
-
-        z-index: 20;
-    }
-
-
-    .mobile-menu a {
-        padding: 16px 0;
-
-        border-bottom: 1px solid #eeeeee;
-
-        font-family: sans-serif;
-        font-size: 14px;
-
-        color: #333;
-    }
-
-
-    .mobile-menu a:last-child {
-        border-bottom: none;
-    }
-
-
-    /* メニューを開いた状態 */
-
-    .mobile-menu.active {
         display: flex;
     }
 
