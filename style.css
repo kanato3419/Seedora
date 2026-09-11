@@ -241,22 +241,25 @@ a {
 /* ====================
    HERO - MOBILE
 ==================== */
+
 @media (max-width: 768px) {
 
     .hero {
+        position: relative;
         width: 100%;
         height: auto;
         aspect-ratio: 1122 / 1402;
 
         background-image: url("images/hero-mobile.png");
-        background-size: 100% auto;
+        background-size: 100% 100%;
         background-repeat: no-repeat;
-        background-position: top center;
+        background-position: center top;
 
         overflow: hidden;
     }
 
     .hero-buttons {
+        position: absolute;
         left: 7%;
         right: 7%;
         bottom: 25px;
@@ -270,6 +273,7 @@ a {
         width: 100%;
         min-width: 0;
         box-sizing: border-box;
+
         padding: 15px 18px;
         font-size: 13px;
     }
@@ -278,7 +282,6 @@ a {
         font-size: 18px;
     }
 }
-
 /* ====================
    MISSION
 ==================== */
