@@ -247,15 +247,14 @@ a {
     .hero {
         position: relative;
         width: 100%;
-        height: auto;
         aspect-ratio: 1122 / 1402;
 
         background-image: url("images/hero-mobile.png");
-        background-size: 100% 100%;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center top;
 
-        overflow: hidden;
+        background-color: #f5f5f2;
     }
 
     .hero-buttons {
@@ -272,14 +271,8 @@ a {
     .hero-buttons a {
         width: 100%;
         min-width: 0;
-        box-sizing: border-box;
-
         padding: 15px 18px;
         font-size: 13px;
-    }
-
-    .hero-buttons span {
-        font-size: 18px;
     }
 }
 /* ====================
