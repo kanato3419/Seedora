@@ -2647,7 +2647,36 @@ main {
 
         font-size: 15px;
     }
+/* ====================
+   NEWS ARTICLE - MOBILE
+==================== */
 
+@media (max-width: 768px) {
+
+    .news-article {
+        padding: 70px 7% 90px;
+        box-sizing: border-box;
+    }
+
+    .news-article-inner {
+        width: 100%;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .news-article h1 {
+        font-size: 30px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .news-article p {
+        font-size: 15px;
+        line-height: 2.1;
+        margin-bottom: 25px;
+    }
+
+}
 
     .news-back-button {
         font-size: 12px;
