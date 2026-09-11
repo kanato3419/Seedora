@@ -1808,3 +1808,339 @@ a {
     }
 
 }
+/* ====================
+   MOBILE FINAL FIX
+==================== */
+
+@media (max-width: 768px) {
+
+    /* ====================
+       HEADER
+    ==================== */
+
+    .header {
+        height: 72px;
+        padding: 0 18px;
+    }
+
+    .logo {
+        width: auto;
+        min-width: 0;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    .edumarket-button {
+        margin-left: auto;
+        padding: 11px 16px;
+        font-size: 11px;
+        gap: 15px;
+    }
+
+
+    /* ====================
+       HERO
+    ==================== */
+
+    .hero {
+        height: 620px;
+        min-height: 0;
+        aspect-ratio: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero-buttons {
+        left: 7%;
+        right: 7%;
+        bottom: 7%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 390px;
+        min-width: 0;
+        box-sizing: border-box;
+        padding: 15px 20px;
+        font-size: 13px;
+    }
+
+
+    /* ====================
+       MISSION
+    ==================== */
+
+    .mission {
+        display: block;
+        width: 100%;
+    }
+
+    .mission-content {
+        width: 100%;
+        padding: 75px 7% 60px;
+        box-sizing: border-box;
+    }
+
+    .mission h2 {
+        font-size: 34px;
+        line-height: 1.7;
+        margin-bottom: 30px;
+    }
+
+    .mission-text {
+        margin: 0 0 35px;
+        padding: 0;
+        font-size: 14px;
+        line-height: 2.2;
+    }
+
+    .mission-image {
+        width: 100%;
+        height: 280px;
+        aspect-ratio: auto;
+    }
+
+    .mission-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* ====================
+       VALUES
+    ==================== */
+
+    .values {
+        padding: 85px 7%;
+    }
+
+    .values .section-heading {
+        margin-bottom: 55px;
+    }
+
+    .values .section-heading h2 {
+        font-size: 27px;
+        line-height: 1.7;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value {
+        padding: 45px 10px;
+        border-right: none;
+        border-bottom: 1px solid #d8ddd8;
+    }
+
+    .value h3 {
+        font-size: 27px;
+    }
+
+    .value p {
+        font-size: 14px;
+        line-height: 2.2;
+    }
+
+
+    /* ====================
+       BUSINESS
+    ==================== */
+
+    .business {
+        padding: 90px 7%;
+    }
+
+    .business .section-heading {
+        margin-bottom: 55px;
+    }
+
+    .business .section-heading h2 {
+        font-size: 28px;
+        line-height: 1.7;
+    }
+
+    .business-lead {
+        font-size: 13px;
+        line-height: 2.2;
+    }
+
+    .business-card {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        margin: 0 auto 25px;
+        padding: 40px 30px;
+
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .business-number {
+        width: auto;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .business-content {
+        width: 100%;
+    }
+
+    .business-content h3 {
+        font-size: 29px;
+        line-height: 1.4;
+    }
+
+    .business-description {
+        font-size: 13px;
+        line-height: 2.1;
+    }
+
+    .business-button {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .business-image {
+        width: 100%;
+        height: 220px;
+
+        margin: 35px 0 0;
+
+        overflow: hidden;
+    }
+
+    .business-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* ====================
+       ABOUT
+    ==================== */
+
+    .about-seedora {
+        padding: 90px 7%;
+    }
+
+    .about-seedora-inner {
+        display: block;
+    }
+
+    .about-seedora-heading {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .about-seedora-heading h2 {
+        font-size: 31px;
+        line-height: 1.7;
+    }
+
+    .about-seedora-content {
+        width: 100%;
+        padding-top: 45px;
+    }
+
+    .about-seedora-content p {
+        font-size: 14px;
+        line-height: 2.2;
+    }
+
+
+    /* ====================
+       NEWS
+    ==================== */
+
+    .news {
+        padding: 85px 7%;
+    }
+
+    .news-inner {
+        display: block;
+    }
+
+    .news-heading {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .news-heading h2 {
+        font-size: 31px;
+    }
+
+    .news-list {
+        width: 100%;
+    }
+
+    .news-item {
+        grid-template-columns: 90px 1fr 25px;
+        min-height: 100px;
+    }
+
+    .news-category {
+        display: none;
+    }
+
+    .news-title {
+        padding: 0 10px;
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+
+    /* ====================
+       CONTACT
+    ==================== */
+
+    .contact {
+        padding: 100px 7%;
+    }
+
+    .contact h2 {
+        font-size: 29px;
+        line-height: 1.7;
+    }
+
+    .contact-text {
+        font-size: 13px;
+        line-height: 2.2;
+    }
+
+
+    /* ====================
+       FOOTER
+    ==================== */
+
+    .footer-inner {
+        padding: 60px 7% 25px;
+    }
+
+    .footer-top {
+        display: block;
+        padding-bottom: 45px;
+    }
+
+    .footer-logo img {
+        width: 135px;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 20px 28px;
+        margin-top: 40px;
+        padding-top: 0;
+    }
+
+}
