@@ -169,7 +169,7 @@ a {
 
 
 /* ====================
-   MOBILE
+   HEADER MOBILE
 ==================== */
 
 @media (max-width: 768px) {
@@ -211,7 +211,48 @@ a {
     }
 
 }
+/* ====================
+   MOBILE HEADER FIX
+==================== */
 
+@media (max-width: 768px) {
+
+    /* EduMarketへボタンを完全に非表示 */
+    .header .edumarket-button {
+        display: none !important;
+    }
+
+    /* スマホ用メニューボタン */
+    .header .menu-button {
+        display: flex !important;
+
+        width: 44px;
+        height: 44px;
+
+        padding: 0;
+        margin: 0;
+
+        border: none;
+        background: transparent;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    .header .menu-button span {
+        display: block;
+
+        width: 22px;
+        height: 1px;
+
+        background: #333;
+
+        border-radius: 0;
+    }
+}
 /* ====================
    HERO
 ==================== */
