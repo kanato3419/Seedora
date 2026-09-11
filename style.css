@@ -246,14 +246,13 @@ a {
 
     .hero {
         width: 100%;
-        height: auto;
-        aspect-ratio: 2048 / 1200;
+        height: 700px;
+        aspect-ratio: auto;
 
-        background-size: 100% auto;
+        background-image: url("images/hero-mobile.png");
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: top center;
-
-        background-color: #f5f5f2;
+        background-position: center center;
     }
 
     .hero-buttons {
@@ -261,7 +260,7 @@ a {
 
         left: 7%;
         right: 7%;
-        bottom: 25px;
+        bottom: 28px;
 
         display: flex;
         flex-direction: column;
