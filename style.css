@@ -238,7 +238,44 @@ a {
     transform: translateY(-2px);
     opacity: 0.85;
 }
+/* ====================
+   HERO - MOBILE
+==================== */
 
+@media (max-width: 768px) {
+
+    .hero {
+        height: 720px;
+        aspect-ratio: auto;
+
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .hero-buttons {
+        left: 7%;
+        right: 7%;
+        bottom: 28px;
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+
+        padding: 16px 20px;
+
+        font-size: 14px;
+    }
+
+    .hero-buttons span {
+        font-size: 18px;
+    }
+}
 /* ====================
    MISSION
 ==================== */
