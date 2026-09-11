@@ -2445,3 +2445,212 @@ main {
     }
 
 }
+/* ====================
+   NEWS ARTICLE
+==================== */
+
+.news-article {
+    width: 100%;
+    padding: 130px 7% 140px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+
+.news-article-inner {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+
+/* ====================
+   ARTICLE HEADER
+==================== */
+
+.news-article-header {
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid #d8ddd8;
+}
+
+
+.news-article-header .section-label {
+    margin: 0 0 18px;
+
+    font-family: sans-serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    color: #3d7b62;
+}
+
+
+.news-article-date {
+    margin: 0 0 28px;
+
+    font-family: sans-serif;
+    font-size: 12px;
+
+    color: #888;
+}
+
+
+.news-article-header h1 {
+    margin: 0;
+
+    font-family: serif;
+    font-size: 40px;
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    color: #222;
+}
+
+
+/* ====================
+   ARTICLE BODY
+==================== */
+
+.news-article-body {
+    padding: 60px 0 20px;
+}
+
+
+.news-article-body p {
+    margin: 0 0 32px;
+
+    font-size: 14px;
+
+    line-height: 2.4;
+
+    color: #555;
+}
+
+
+.news-article-body strong {
+    font-weight: 500;
+    color: #333;
+}
+
+
+/* 引用 */
+
+.news-article-body blockquote {
+    margin: 45px 0;
+
+    padding: 28px 35px;
+
+    border-left: 2px solid #3d7b62;
+
+    background: #f7f8f5;
+
+    font-family: serif;
+    font-size: 17px;
+
+    line-height: 2;
+
+    color: #333;
+}
+
+
+/* ====================
+   BACK BUTTON
+==================== */
+
+.news-article-footer {
+    padding-top: 45px;
+
+    border-top: 1px solid #d8ddd8;
+
+    text-align: center;
+}
+
+
+.news-back-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 15px;
+
+    padding: 13px 22px;
+
+    border: 1px solid #777;
+
+    border-radius: 999px;
+
+    font-family: sans-serif;
+    font-size: 13px;
+
+    color: #333;
+
+    transition: 0.3s ease;
+}
+
+
+.news-back-button span {
+    font-size: 17px;
+}
+
+
+.news-back-button:hover {
+    background: #3d7b62;
+
+    border-color: #3d7b62;
+
+    color: #ffffff;
+}
+
+
+/* ====================
+   MOBILE
+==================== */
+
+@media (max-width: 768px) {
+
+    .news-article {
+        padding: 85px 7% 100px;
+    }
+
+
+    .news-article-header {
+        padding-bottom: 40px;
+    }
+
+
+    .news-article-header h1 {
+        font-size: 28px;
+        line-height: 1.7;
+    }
+
+
+    .news-article-body {
+        padding-top: 40px;
+    }
+
+
+    .news-article-body p {
+        font-size: 13px;
+        line-height: 2.2;
+
+        margin-bottom: 28px;
+    }
+
+
+    .news-article-body blockquote {
+        margin: 35px 0;
+
+        padding: 22px 20px;
+
+        font-size: 15px;
+    }
+
+
+    .news-back-button {
+        font-size: 12px;
+    }
+
+}
