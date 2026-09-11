@@ -256,32 +256,37 @@ a {
 /* ====================
    MOBILE
 ==================== */
-
 @media (max-width: 768px) {
 
     .hero {
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .hero-image {
+        display: block;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .hero-image img {
-        width: 100%;
-        height: auto;
         display: block;
+        width: 100%;
+        max-width: none;
+        height: auto;
+        margin: 0;
+        padding: 0;
     }
 
     .hero-buttons {
         position: relative;
-
         left: auto;
         bottom: auto;
 
-        width: auto;
         margin: -55px 7% 30px;
-
+        
         display: flex;
         flex-direction: column;
         gap: 12px;
@@ -293,12 +298,11 @@ a {
         width: 100%;
         min-width: 0;
         box-sizing: border-box;
-
         padding: 15px 18px;
-
         font-size: 13px;
     }
 }
+
 /* ====================
    MISSION
 ==================== */
