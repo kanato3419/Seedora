@@ -277,11 +277,12 @@ a {
 
 
 /* ====================
-   MOBILE
+   HERO - MOBILE
 ==================== */
 
 @media (max-width: 768px) {
 
+    /* HERO画像 */
     .hero {
         width: 100%;
         margin: 0;
@@ -289,27 +290,37 @@ a {
     }
 
     .hero-image {
+        display: block;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .hero-image img {
+        display: block;
         width: 100%;
         height: auto;
+        margin: 0;
+        padding: 0;
     }
 
-    .hero-buttons {
-        position: absolute;
 
-        left: 7%;
-        right: 7%;
-        bottom: 25px;
+    /* ボタン */
+    .hero-buttons {
+        position: relative;
+
+        width: 86%;
+        margin: 0 auto;
 
         display: flex;
         flex-direction: column;
-
         gap: 12px;
+
+        padding: 20px 0 30px;
     }
 
+
+    /* ボタン共通 */
     .hero-buttons a {
         width: 100%;
         min-width: 0;
@@ -320,6 +331,8 @@ a {
         font-size: 13px;
     }
 
+
+    /* 矢印 */
     .hero-buttons span {
         font-size: 18px;
     }
