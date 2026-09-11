@@ -1,0 +1,1810 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family:
+        "Noto Serif JP",
+        "Yu Mincho",
+        "Hiragino Mincho ProN",
+        serif;
+
+    color: #17201c;
+
+    background: #ffffff;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ====================
+   HEADER
+==================== */
+
+.header {
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 5%;
+
+    background: #ffffff;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* LOGO */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    min-width: 250px;
+}
+
+
+.logo-mark {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 36px;
+
+    font-weight: bold;
+
+    color: #4d8c68;
+}
+
+
+.logo-text {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-left: 8px;
+}
+
+
+.logo-text span {
+
+    font-size: 23px;
+
+    letter-spacing: 2px;
+}
+
+
+.logo-text small {
+
+    font-family: sans-serif;
+
+    font-size: 8px;
+
+    color: #777;
+
+    margin-top: 2px;
+}
+
+
+/* NAVIGATION */
+
+.navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-left: auto;
+}
+
+
+.navigation a {
+
+    font-family: sans-serif;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.navigation a:hover {
+
+    color: #39815d;
+}
+
+
+/* EDUMARKET BUTTON */
+
+.edumarket-button {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin-left: 35px;
+
+    padding: 13px 23px;
+
+    border-radius: 30px;
+
+    background: #397c5b;
+
+    color: white;
+
+    font-family: sans-serif;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.edumarket-button:hover {
+
+    background: #285e43;
+
+    transform: translateY(-2px);
+}
+
+
+/* ====================
+   HERO
+==================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2048 / 768;
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* ボタン */
+.hero-buttons {
+    position: absolute;
+    left: 7.5%;
+    bottom: 8%;
+    display: flex;
+    gap: 14px;
+}
+
+/* 共通 */
+.hero-buttons a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    min-width: 175px;
+    padding: 12px 18px;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+/* 緑ボタン */
+.button-primary {
+    background: #347b61;
+    color: #fff;
+    border: 1px solid #347b61;
+}
+
+/* 白ボタン */
+.button-secondary {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: 1px solid #777;
+}
+
+/* 矢印 */
+.hero-buttons span {
+    font-size: 18px;
+}
+
+/* ホバー */
+.hero-buttons a:hover {
+    transform: translateY(-2px);
+    opacity: 0.85;
+}
+
+/* ====================
+   MISSION
+==================== */
+
+.mission {
+
+    display: grid;
+
+    grid-template-columns: 42% 58%;
+
+    min-height: 350px;
+}
+
+
+.mission-text {
+
+    padding: 65px 8%;
+}
+
+
+.section-label {
+
+    font-family: sans-serif;
+
+    color: #397c5b;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+.mission h2 {
+
+    font-size: 29px;
+
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+
+.mission-text > p:not(.section-label) {
+
+    font-family: sans-serif;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-top: 20px;
+
+    color: #555;
+}
+
+
+.text-button {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 10px 22px;
+
+    border: 1px solid #777;
+
+    border-radius: 25px;
+
+    font-family: sans-serif;
+
+    font-size: 12px;
+}
+
+
+.mission-image {
+
+    background:
+        linear-gradient(
+            135deg,
+            #d8e7df,
+            #91b6a0
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.plant {
+
+    font-size: 100px;
+}
+
+
+/* ====================
+   VALUES
+==================== */
+
+.values {
+
+    padding: 55px 5%;
+
+    background: #f7faf8;
+}
+
+
+.section-heading h2 {
+
+    font-size: 25px;
+
+    font-weight: 500;
+}
+
+
+.values-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    margin-top: 35px;
+}
+
+
+.value {
+
+    padding: 20px 40px;
+
+    border-right:
+        1px solid #d8dedb;
+}
+
+
+.value:last-child {
+
+    border-right: none;
+}
+
+
+.value-number {
+
+    font-family: sans-serif;
+
+    font-size: 12px;
+
+    color: #397c5b;
+}
+
+
+.value h3 {
+
+    font-size: 20px;
+
+    margin-top: 8px;
+}
+
+
+.value p {
+
+    font-family: sans-serif;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: #666;
+
+    margin-top: 10px;
+}
+
+
+/* ====================
+   RESPONSIVE
+==================== */
+
+@media (max-width: 900px) {
+
+    .navigation {
+
+        display: none;
+    }
+
+
+    .logo {
+
+        min-width: auto;
+    }
+
+
+    .edumarket-button {
+
+        margin-left: auto;
+    }
+
+
+    .hero {
+
+        min-height: 500px;
+    }
+
+
+    .mission {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .mission-image {
+
+        min-height: 250px;
+    }
+
+
+    .values-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .value {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #d8dedb;
+
+        padding: 25px 0;
+    }
+
+
+    .value:last-child {
+
+        border-bottom: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+
+        height: 65px;
+
+        padding: 0 20px;
+    }
+
+
+    .logo-text span {
+
+        font-size: 19px;
+    }
+
+
+    .logo-text small {
+
+        display: none;
+    }
+
+
+    .edumarket-button {
+
+        padding: 10px 15px;
+
+        font-size: 10px;
+    }
+
+
+    .hero {
+
+        min-height: 600px;
+
+        padding: 60px 25px;
+    }
+
+
+    .hero-catch {
+
+        font-size: 38px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .hero-description {
+
+        font-size: 12px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .mission-text {
+
+        padding: 50px 25px;
+    }
+}
+/* Seedora Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 220px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+/* ====================
+   MISSION
+==================== */
+
+.mission {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #fff;
+}
+
+/* 左側：文章 */
+.mission-content {
+    width: 42%;
+    padding: 65px 5%;
+    box-sizing: border-box;
+}
+
+.section-label {
+    margin: 0 0 18px;
+    font-size: 13px;
+    color: #3d7b62;
+    letter-spacing: 1px;
+}
+
+.mission h2 {
+    margin: 0 0 25px;
+    font-family: serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.55;
+    color: #222;
+}
+
+.mission-text {
+    margin: 0 0 28px;
+    font-size: 13px;
+    line-height: 2;
+    color: #666;
+}
+
+/* Missionボタン */
+.mission-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 22px;
+
+    padding: 10px 18px;
+    min-width: 120px;
+
+    border: 1px solid #777;
+    border-radius: 999px;
+
+    color: #333;
+    background: #fff;
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.mission-button span {
+    font-size: 16px;
+}
+
+.mission-button:hover {
+    background: #3d7b62;
+    color: #fff;
+    border-color: #3d7b62;
+}
+
+/* 右側：画像 */
+.mission-image {
+    width: 58%;
+    aspect-ratio: 1.75 / 1;
+    overflow: hidden;
+}
+
+.mission-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+/* ====================
+   VALUES
+==================== */
+
+.values {
+    width: 100%;
+    padding: 120px 8%;
+    box-sizing: border-box;
+    background: #f7f8f5;
+}
+
+/* 見出し */
+
+.values .section-heading {
+    max-width: 760px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.values .section-label {
+    margin: 0 0 18px;
+    font-size: 13px;
+    color: #3d7b62;
+    letter-spacing: 2px;
+}
+
+.values .section-heading h2 {
+    margin: 0;
+    font-family: serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222;
+}
+
+
+/* 3つの価値観 */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+    border-top: 1px solid #d8ddd8;
+}
+
+
+/* 各Value */
+
+.value {
+    position: relative;
+    padding: 55px 45px 45px;
+    border-right: 1px solid #d8ddd8;
+    box-sizing: border-box;
+}
+
+.value:last-child {
+    border-right: none;
+}
+
+
+/* 番号 */
+
+.value-number {
+    display: block;
+    margin-bottom: 35px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #3d7b62;
+}
+
+
+/* タイトル */
+
+.value h3 {
+    margin: 0 0 25px;
+
+    font-family: serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: #222;
+}
+
+
+/* 説明 */
+
+.value p {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 2.2;
+    color: #666;
+}
+
+
+/* ====================
+   VALUES RESPONSIVE
+==================== */
+
+@media (max-width: 768px) {
+
+    .values {
+        padding: 80px 7%;
+    }
+
+    .values .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .values .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value {
+        padding: 40px 10px;
+        border-right: none;
+        border-bottom: 1px solid #d8ddd8;
+    }
+
+    .value:last-child {
+        border-bottom: none;
+    }
+
+}
+/* ====================
+   BUSINESS
+==================== */
+
+.business {
+    width: 100%;
+    padding: 120px 8%;
+    box-sizing: border-box;
+    background: #f7f8f5;
+}
+
+
+/* 見出し */
+
+.business .section-heading {
+    max-width: 760px;
+    margin: 0 auto 75px;
+    text-align: center;
+}
+
+.business .section-label {
+    margin: 0 0 18px;
+
+    font-size: 13px;
+    color: #3d7b62;
+    letter-spacing: 2px;
+}
+
+.business .section-heading h2 {
+    margin: 0 0 25px;
+
+    font-family: serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222;
+}
+
+.business-lead {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 2.1;
+    color: #666;
+}
+
+
+/* ====================
+   BUSINESS CARD
+==================== */
+
+.business-card {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    max-width: 1100px;
+    height: 340px;
+
+    margin: 0 auto 30px;
+    padding: 45px 50px;
+
+    box-sizing: border-box;
+
+    background: #fff;
+    border: 1px solid #d8ddd8;
+
+    overflow: hidden;
+}
+
+
+/* 番号 */
+
+.business-number {
+    width: 70px;
+
+    align-self: flex-start;
+
+    padding-top: 5px;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #3d7b62;
+}
+
+
+/* コンテンツ */
+
+.business-content {
+    flex: 1;
+}
+
+.business-category {
+    margin: 0 0 12px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #888;
+}
+
+.business-content h3 {
+    margin: 0 0 20px;
+
+    font-family: serif;
+    font-size: 34px;
+    font-weight: 400;
+    color: #222;
+}
+
+.business-description {
+    margin: 0 0 30px;
+
+    font-size: 13px;
+    line-height: 2;
+    color: #666;
+}
+
+
+/* ボタン */
+
+.business-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #777;
+    border-radius: 999px;
+
+    color: #333;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.business-button span {
+    font-size: 17px;
+}
+
+.business-button:hover {
+    background: #3d7b62;
+    color: #fff;
+}
+/* ====================
+   BUSINESS IMAGE
+==================== */
+
+.business-image {
+    width: 320px;
+    height: 300px;
+
+    margin-left: 50px;
+
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.business-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+}
+
+/* ====================
+   BUSINESS RESPONSIVE
+==================== */
+
+@media (max-width: 768px) {
+
+    .business {
+        padding: 80px 7%;
+    }
+
+    .business .section-heading {
+        margin-bottom: 50px;
+    }
+
+    .business .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .business-card {
+        display: block;
+
+        min-height: auto;
+
+        padding: 40px 30px;
+    }
+
+    .business-number {
+        width: auto;
+        margin-bottom: 30px;
+    }
+
+    .business-content h3 {
+        font-size: 28px;
+    }
+
+}
+/* ====================
+   ABOUT SEEDORA
+==================== */
+
+.about-seedora {
+    width: 100%;
+    padding: 130px 8%;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.about-seedora-inner {
+    display: flex;
+    align-items: flex-start;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 左側 */
+
+.about-seedora-heading {
+    width: 50%;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+
+.about-seedora-heading .section-label {
+    margin: 0 0 20px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #3d7b62;
+}
+
+.about-seedora-heading h2 {
+    margin: 0;
+
+    font-family: serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.65;
+
+    color: #222;
+}
+
+
+/* 右側 */
+
+.about-seedora-content {
+    width: 50%;
+    padding-top: 40px;
+}
+
+.about-seedora-content p {
+    margin: 0 0 25px;
+
+    font-size: 14px;
+    line-height: 2.2;
+
+    color: #666;
+}
+
+
+/* ボタン */
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 10px;
+    padding: 11px 18px;
+
+    min-width: 145px;
+
+    border: 1px solid #777;
+    border-radius: 999px;
+
+    color: #333;
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.about-button span {
+    font-size: 17px;
+}
+
+.about-button:hover {
+    background: #3d7b62;
+    border-color: #3d7b62;
+    color: #fff;
+}
+
+
+/* ====================
+   ABOUT RESPONSIVE
+==================== */
+
+@media (max-width: 768px) {
+
+    .about-seedora {
+        padding: 80px 7%;
+    }
+
+    .about-seedora-inner {
+        display: block;
+    }
+
+    .about-seedora-heading {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .about-seedora-heading h2 {
+        font-size: 30px;
+    }
+
+    .about-seedora-content {
+        width: 100%;
+        padding-top: 40px;
+    }
+
+}
+/* ====================
+   NEWS
+==================== */
+
+.news {
+    width: 100%;
+    padding: 120px 8%;
+    box-sizing: border-box;
+    background: #f7f8f5;
+}
+
+.news-inner {
+    display: flex;
+    align-items: flex-start;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* 左側 */
+
+.news-heading {
+    width: 30%;
+}
+
+.news-heading .section-label {
+    margin: 0 0 18px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #3d7b62;
+}
+
+.news-heading h2 {
+    margin: 0;
+
+    font-family: serif;
+    font-size: 34px;
+    font-weight: 400;
+
+    color: #222;
+}
+
+
+/* 右側 */
+
+.news-list {
+    width: 70%;
+    border-top: 1px solid #d8ddd8;
+}
+
+
+/* News 1件 */
+
+.news-item {
+    display: grid;
+
+    grid-template-columns: 105px 125px 1fr 30px;
+    align-items: center;
+
+    min-height: 85px;
+
+    border-bottom: 1px solid #d8ddd8;
+
+    text-decoration: none;
+    color: #333;
+
+    transition: 0.3s ease;
+}
+
+
+/* 日付 */
+
+.news-date {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+
+/* カテゴリー */
+
+.news-category {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: #3d7b62;
+}
+
+
+/* タイトル */
+
+.news-title {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* 矢印 */
+
+.news-arrow {
+    font-size: 17px;
+    text-align: right;
+
+    transition: 0.3s ease;
+}
+
+
+/* ホバー */
+
+.news-item:hover {
+    color: #3d7b62;
+}
+
+.news-item:hover .news-arrow {
+    transform: translateX(5px);
+}
+
+
+/* ====================
+   NEWS RESPONSIVE
+==================== */
+
+@media (max-width: 768px) {
+
+    .news {
+        padding: 80px 7%;
+    }
+
+    .news-inner {
+        display: block;
+    }
+
+    .news-heading {
+        width: 100%;
+        margin-bottom: 45px;
+    }
+
+    .news-heading h2 {
+        font-size: 30px;
+    }
+
+    .news-list {
+        width: 100%;
+    }
+
+    .news-item {
+        grid-template-columns: 90px 1fr 25px;
+        min-height: 100px;
+    }
+
+    .news-category {
+        display: none;
+    }
+
+    .news-title {
+        padding: 0 10px;
+    }
+
+}
+/* ====================
+   CONTACT
+==================== */
+
+.contact {
+    width: 100%;
+    padding: 130px 8%;
+    box-sizing: border-box;
+    background: #ffffff;
+    text-align: center;
+}
+
+.contact-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact .section-label {
+    margin: 0 0 20px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #3d7b62;
+}
+
+.contact h2 {
+    margin: 0 0 25px;
+
+    font-family: serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: #222;
+}
+
+.contact-text {
+    margin: 0 0 35px;
+
+    font-size: 13px;
+    line-height: 2.1;
+
+    color: #666;
+}
+
+
+/* ボタン */
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 45px;
+
+    padding: 13px 22px;
+
+    min-width: 160px;
+
+    border-radius: 999px;
+    border: 1px solid #3d7b62;
+
+    background: #3d7b62;
+    color: #fff;
+
+    text-decoration: none;
+    font-size: 13px;
+
+    transition: 0.3s ease;
+}
+
+.contact-button span {
+    font-size: 17px;
+}
+
+.contact-button:hover {
+    background: #2f624e;
+    border-color: #2f624e;
+    transform: translateY(-2px);
+}
+
+
+/* ====================
+   CONTACT RESPONSIVE
+==================== */
+
+@media (max-width: 768px) {
+
+    .contact {
+        padding: 90px 7%;
+    }
+
+    .contact h2 {
+        font-size: 28px;
+    }
+
+}
+/* ====================
+   FOOTER
+==================== */
+
+.footer {
+    width: 100%;
+    background: #263b32;
+    color: #fff;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 65px 8% 25px;
+    box-sizing: border-box;
+}
+
+
+/* 上部分 */
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding-bottom: 55px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+/* ブランド */
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.footer-logo {
+    display: inline-block;
+}
+
+.footer-logo img {
+    display: block;
+    width: 135px;
+    height: auto;
+}
+
+.footer-brand p {
+    margin: 0;
+
+    font-family: serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* ナビ */
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    padding-top: 10px;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    transition: 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #fff;
+}
+
+
+/* 下部分 */
+
+.footer-bottom {
+    padding-top: 22px;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    font-size: 10px;
+    letter-spacing: 1px;
+
+    color: rgba(255, 255, 255, 0.45);
+}
+
+
+/* ====================
+   FOOTER RESPONSIVE
+==================== */
+
+@media (max-width: 768px) {
+
+    .footer-inner {
+        padding: 55px 7% 22px;
+    }
+
+    .footer-top {
+        display: block;
+        padding-bottom: 40px;
+    }
+
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 20px 28px;
+
+        margin-top: 40px;
+        padding-top: 0;
+    }
+
+}
+/* ====================
+   CONTACT PAGE
+==================== */
+
+.contact-page {
+    width: 100%;
+    padding: 130px 8% 140px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+
+/* 見出し */
+
+.contact-heading {
+    max-width: 900px;
+    margin: 0 auto 80px;
+    text-align: center;
+}
+
+.contact-heading .section-label {
+    margin: 0 0 22px;
+
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    color: #3d7b62;
+}
+
+.contact-heading h1 {
+    margin: 0 0 28px;
+
+    font-family: serif;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1.6;
+
+    color: #222;
+}
+
+.contact-lead {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 2.2;
+
+    color: #666;
+}
+
+
+/* ====================
+   FORM
+==================== */
+
+.contact-form {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+/* 各項目 */
+
+.form-item {
+    margin-bottom: 32px;
+}
+
+
+/* ラベル */
+
+.form-item label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+
+    color: #333;
+}
+
+
+/* 入力欄 */
+
+.form-item input,
+.form-item textarea {
+
+    width: 100%;
+
+    padding: 15px 16px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d8ddd8;
+
+    background: #fafbf9;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    color: #333;
+
+    outline: none;
+
+    transition: 0.3s ease;
+}
+
+
+/* フォーカス時 */
+
+.form-item input:focus,
+.form-item textarea:focus {
+
+    border-color: #3d7b62;
+
+    background: #fff;
+}
+
+
+/* textarea */
+
+.form-item textarea {
+
+    resize: vertical;
+
+    line-height: 1.8;
+}
+
+
+/* プレースホルダー */
+
+.form-item input::placeholder,
+.form-item textarea::placeholder {
+
+    color: #aaa;
+}
+
+
+/* ====================
+   SEND BUTTON
+==================== */
+
+.contact-submit {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 190px;
+
+    margin: 50px auto 0;
+
+    padding: 14px 20px;
+
+    border: 1px solid #3d7b62;
+    border-radius: 999px;
+
+    background: #3d7b62;
+
+    color: #fff;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.contact-submit span {
+    font-size: 17px;
+}
+
+.contact-submit:hover {
+
+    background: #fff;
+
+    color: #3d7b62;
+}
+
+
+/* ====================
+   CONTACT RESPONSIVE
+==================== */
+
+@media (max-width: 768px) {
+
+    .contact-page {
+        padding: 90px 7% 100px;
+    }
+
+    .contact-heading {
+        margin-bottom: 55px;
+    }
+
+    .contact-heading h1 {
+        font-size: 28px;
+    }
+
+    .contact-lead {
+        font-size: 12px;
+    }
+
+    .form-item {
+        margin-bottom: 25px;
+    }
+
+    .contact-submit {
+        width: 180px;
+    }
+
+}
+/* ====================
+   THANKS PAGE
+==================== */
+
+.thanks-page {
+    width: 100%;
+    min-height: 650px;
+    padding: 130px 8% 140px;
+    box-sizing: border-box;
+    background: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thanks-inner {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.thanks-inner .section-label {
+    margin: 0 0 22px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #3d7b62;
+}
+
+.thanks-inner h1 {
+    margin: 0 0 30px;
+    font-family: serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #222;
+}
+
+.thanks-text {
+    margin: 0;
+    font-size: 13px;
+    line-height: 2.2;
+    color: #666;
+}
+
+.thanks-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 220px;
+
+    margin: 50px auto 0;
+    padding: 14px 20px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #3d7b62;
+    border-radius: 999px;
+
+    background: #3d7b62;
+    color: #fff;
+
+    font-size: 13px;
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.thanks-button span {
+    font-size: 17px;
+}
+
+.thanks-button:hover {
+    background: #fff;
+    color: #3d7b62;
+}
+
+
+/* ====================
+   THANKS PAGE - MOBILE
+==================== */
+
+@media (max-width: 768px) {
+
+    .thanks-page {
+        min-height: 550px;
+        padding: 90px 7% 100px;
+    }
+
+    .thanks-inner h1 {
+        font-size: 28px;
+    }
+
+    .thanks-text {
+        font-size: 12px;
+    }
+
+    .thanks-button {
+        width: 200px;
+    }
+
+}
