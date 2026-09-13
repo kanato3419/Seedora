@@ -619,10 +619,11 @@ main {
     align-items: center;
 }
 
-/* Vision 写真 */
+/* 写真 */
 .vision-image {
     width: 100%;
     overflow: hidden;
+    order: 1;
 }
 
 .vision-image img {
@@ -631,9 +632,10 @@ main {
     height: auto;
 }
 
-/* Vision 文章 */
+/* 文章 */
 .vision-content {
     padding-left: 10px;
+    order: 2;
 }
 
 .vision-content h2 {
@@ -670,12 +672,15 @@ main {
         gap: 40px;
     }
 
-    .vision-image {
-        width: 100%;
+    /* スマホでは文章を上、写真を下 */
+    .vision-content {
+        order: 1;
+        padding-left: 0;
     }
 
-    .vision-content {
-        padding-left: 0;
+    .vision-image {
+        order: 2;
+        width: 100%;
     }
 
     .vision-content h2 {
