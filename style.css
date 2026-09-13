@@ -601,7 +601,96 @@ main {
     font-size: 100px;
 }
 
+/* ==============================
+   Vision
+============================== */
 
+.vision {
+    padding: 120px 7.5%;
+    background: #f7f8f5;
+}
+
+.vision-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Vision 写真 */
+.vision-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+.vision-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Vision 文章 */
+.vision-content {
+    padding-left: 10px;
+}
+
+.vision-content h2 {
+    margin: 25px 0 40px;
+    font-family: serif;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+}
+
+.vision-text {
+    margin-bottom: 25px;
+    color: #555;
+    font-size: 15px;
+    line-height: 2.2;
+    letter-spacing: 0.04em;
+}
+
+
+/* ==============================
+   Vision - スマホ
+============================== */
+
+@media (max-width: 768px) {
+
+    .vision {
+        padding: 80px 6%;
+    }
+
+    .vision-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .vision-image {
+        width: 100%;
+    }
+
+    .vision-content {
+        padding-left: 0;
+    }
+
+    .vision-content h2 {
+        font-size: 25px;
+        line-height: 1.7;
+        margin: 20px 0 30px;
+    }
+
+    .vision-text {
+        font-size: 13px;
+        line-height: 2;
+        margin-bottom: 20px;
+    }
+
+}
 /* ====================
    VALUES
 ==================== */
