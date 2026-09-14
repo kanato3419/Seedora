@@ -522,19 +522,15 @@ main {
     padding: 65px 8%;
 }
 
-
 .section-label {
-
-    font-family: sans-serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     color: #397c5b;
-
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 12px;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    margin-bottom: 22px;
 }
+
 
 
 .mission h2 {
