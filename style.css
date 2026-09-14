@@ -525,7 +525,7 @@ main {
 .section-label {
     font-family: Georgia, "Times New Roman", serif;
     color: #397c5b;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     letter-spacing: 0.12em;
     margin-bottom: 22px;
@@ -603,8 +603,8 @@ main {
     }
 
     .mission h2 {
-        font-size: 27px;
-        line-height: 1.7;
+        font-size: 24px;
+        line-height: 1.8;
     }
 
     .mission-text > p:not(.section-label) {
@@ -614,8 +614,8 @@ main {
     }
 
     .section-label {
-        font-size: 22px;
-        margin-bottom: 20px;
+        font-size: 27px;
+        margin-bottom: 24px;
     }
 
 }
