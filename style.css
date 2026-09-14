@@ -1,2983 +1,972 @@
+/* ==============================
+   RESET
+============================== */
+
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
+    margin: 0;
+    padding: 0;
+
     font-family:
-        "Noto Serif JP",
-        "Yu Mincho",
-        "Hiragino Mincho ProN",
-        serif;
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
 
-    color: #17201c;
-
-    background: #ffffff;
+    color: #222;
+    background: #fff;
 }
-
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 
-/* ====================
+
+/* ==============================
    HEADER
-==================== */
+============================== */
 
 .header {
-    width: 100%;
-    height: 72px;
-
-    display: flex;
-    align-items: center;
-
-    padding: 0 5%;
-
-    background: #ffffff;
-
     position: relative;
-    z-index: 100;
 
-    box-sizing: border-box;
-}
+    width: 100%;
+    height: 76px;
 
-
-/* ====================
-   LOGO
-==================== */
-
-.logo {
     display: flex;
     align-items: center;
 
-    flex-shrink: 0;
+    padding: 0 6%;
+
+    background: #fff;
+
+    z-index: 1000;
 }
+
 
 .logo img {
-    display: block;
-    width: 170px;
-    height: auto;
+    width: 145px;
 }
 
 
-/* ====================
-   NAVIGATION
-==================== */
-
 .navigation {
+    margin-left: auto;
+
     display: flex;
     align-items: center;
 
     gap: 30px;
-
-    margin-left: auto;
 }
 
 
 .navigation a {
-    font-family: sans-serif;
     font-size: 12px;
+    letter-spacing: 0.08em;
 
-    white-space: nowrap;
+    color: #333;
 
     transition: 0.3s ease;
 }
 
 
 .navigation a:hover {
-    color: #39815d;
+    color: #397c5b;
 }
 
 
-/* ====================
-   EDUMARKET BUTTON
-==================== */
+.header-button {
+    margin-left: 30px;
 
-.edumarket-button {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 15px;
 
-    gap: 25px;
+    padding: 10px 18px;
 
-    margin-left: 35px;
+    border: 1px solid #397c5b;
+    border-radius: 999px;
 
-    padding: 13px 23px;
+    color: #397c5b;
 
-    border-radius: 30px;
-
-    background: #397c5b;
-    color: white;
-
-    font-family: sans-serif;
     font-size: 12px;
-
-    white-space: nowrap;
 
     transition: 0.3s ease;
 }
 
 
-.edumarket-button:hover {
-    background: #285e43;
-    transform: translateY(-2px);
+.header-button:hover {
+    background: #397c5b;
+    color: #fff;
 }
 
 
-.edumarket-button span {
-    font-size: 16px;
+.header-button span {
+    font-size: 15px;
 }
 
 
-/* ====================
-   MOBILE MENU BUTTON
-==================== */
+
+/* ==============================
+   MOBILE MENU
+============================== */
 
 .menu-button {
     display: none;
 
-    width: 44px;
-    height: 44px;
+    margin-left: auto;
 
-    padding: 0;
+    width: 42px;
+    height: 42px;
 
     border: none;
     background: transparent;
 
-    cursor: pointer;
-
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    gap: 5px;
+    padding: 8px;
 }
 
 
 .menu-button span {
     display: block;
 
-    width: 22px;
+    width: 100%;
     height: 1px;
+
+    margin: 6px 0;
 
     background: #333;
 }
 
-
-/* ====================
-   HEADER MOBILE
-==================== */
-
-@media (max-width: 768px) {
-
-    .header {
-        height: 72px;
-
-        padding: 0 5%;
-
-        justify-content: space-between;
-    }
-
-
-    /* ロゴ */
-
-    .logo img {
-        width: 145px;
-    }
-
-
-    /* PCナビを消す */
-
-    .navigation {
-        display: none;
-    }
-
-
-    /* PCのEduMarketボタンを消す */
-
-    .edumarket-button {
-        display: none;
-    }
-
-
-    /* ハンバーガーを表示 */
-
-    .menu-button {
-        display: flex;
-    }
-
-}
-/* ====================
-   MOBILE HEADER FIX
-==================== */
-
-@media (max-width: 768px) {
-
-    /* EduMarketへボタンを完全に非表示 */
-    .header .edumarket-button {
-        display: none !important;
-    }
-
-    /* スマホ用メニューボタン */
-    .header .menu-button {
-        display: flex !important;
-
-        width: 44px;
-        height: 44px;
-
-        padding: 0;
-        margin: 0;
-
-        border: none;
-        background: transparent;
-
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        gap: 5px;
-    }
-
-    .header .menu-button span {
-        display: block;
-
-        width: 22px;
-        height: 1px;
-
-        background: #333;
-
-        border-radius: 0;
-    }
-}
-/* ====================
-   MOBILE MENU
-==================== */
 
 .mobile-menu {
     display: none;
 }
 
 
-/* スマホ */
 
-@media (max-width: 768px) {
-
-    .mobile-menu {
-        position: absolute;
-
-        top: 72px;
-        left: 0;
-
-        width: 100%;
-
-        display: none;
-        flex-direction: column;
-
-        background: #ffffff;
-
-        border-top: 1px solid #eeeeee;
-
-        z-index: 99;
-    }
-
-    .mobile-menu a {
-        display: block;
-
-        padding: 20px 7%;
-
-        border-bottom: 1px solid #eeeeee;
-
-        font-family: sans-serif;
-        font-size: 14px;
-
-        color: #333;
-    }
-
-    .mobile-menu.active {
-        display: flex;
-    }
-
-}
-/* ====================
+/* ==============================
    HERO
-==================== */
+============================== */
 
 .hero {
     position: relative;
+
     width: 100%;
-    margin: 0;
-    padding: 0;
+    overflow: hidden;
 }
 
 
-/* HERO IMAGE */
-
-.hero-image {
+.hero picture {
     display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
 }
 
-.hero-image img {
-    display: block;
+
+.hero picture img {
     width: 100%;
     height: auto;
-    margin: 0;
-    padding: 0;
 }
 
-.hero-title {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-/* ====================
-   HERO BUTTONS
-==================== */
 
 .hero-buttons {
     position: absolute;
 
-    left: 7.5%;
+    left: 7%;
     bottom: 8%;
 
     display: flex;
-    gap: 14px;
 
-    z-index: 2;
+    gap: 14px;
 }
 
 
-/* 共通 */
-
-.hero-buttons a {
+.button {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 24px;
+    min-width: 180px;
 
-    min-width: 175px;
-
-    padding: 12px 18px;
+    padding: 13px 20px;
 
     border-radius: 999px;
 
-    text-decoration: none;
-    font-size: 13px;
+    font-size: 12px;
 
     transition: 0.3s ease;
 }
 
 
-/* 緑ボタン */
+.button span {
+    margin-left: 20px;
+    font-size: 17px;
+}
+
 
 .button-primary {
-    background: #347b61;
+    background: #397c5b;
     color: #fff;
-    border: 1px solid #347b61;
 }
 
 
-/* 白ボタン */
+.button-primary:hover {
+    background: #2f684c;
+}
+
 
 .button-secondary {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255,255,255,0.9);
+
+    border: 1px solid #777;
+
     color: #333;
-    border: 1px solid #777;
 }
 
 
-/* 矢印 */
-
-.hero-buttons span {
-    font-size: 18px;
-}
-
-
-/* ホバー */
-
-.hero-buttons a:hover {
-    transform: translateY(-2px);
-    opacity: 0.85;
-}
-
-
-/* ====================
-   HERO - MOBILE
-==================== */
-
-@media (max-width: 768px) {
-
-    /* HERO画像 */
-    .hero {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .hero-image {
-        display: block;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    .hero-image img {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 0;
-        padding: 0;
-    }
-
-
-    /* ボタン */
-    .hero-buttons {
-        position: relative;
-
-        width: 86%;
-        margin: 0 auto;
-
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-
-        padding: 20px 0 30px;
-    }
-
-
-    /* ボタン共通 */
-    .hero-buttons a {
-        width: 100%;
-        min-width: 0;
-        box-sizing: border-box;
-
-        padding: 15px 18px;
-
-        font-size: 13px;
-    }
-
-
-    /* 矢印 */
-    .hero-buttons span {
-        font-size: 18px;
-    }
-}
-/* ====================
-   HERO - FULL WIDTH
-==================== */
-
-main {
-    width: 100%;
-    margin: 0;
-    padding: 0 !important;
-}
-
-.hero {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.hero-image {
-    width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-.hero-image img {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-/* ====================
-   MISSION
-==================== */
-
-.mission {
-
-    display: grid;
-
-    grid-template-columns: 42% 58%;
-
-    min-height: 350px;
-}
-
-
-.mission-text {
-
-    padding: 65px 8%;
-}
-
-.section-label {
-    font-family: Georgia, "Times New Roman", serif;
-    color: #397c5b;
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 0.12em;
-    margin-bottom: 22px;
+.button-secondary:hover {
+    background: #fff;
 }
 
 
 
-.mission h2 {
-
-    font-size: 29px;
-
-    line-height: 1.6;
-
-    font-weight: 500;
-}
-
-
-.mission-text > p:not(.section-label) {
-
-    font-family: sans-serif;
-
-    font-size: 15px;
-
-    line-height: 2;
-
-    margin-top: 20px;
-
-    color: #444;
-}
-
-
-.text-button {
-
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 10px 22px;
-
-    border: 1px solid #777;
-
-    border-radius: 25px;
-
-    font-family: sans-serif;
-
-    font-size: 12px;
-}
-
-
-.mission-image {
-
-    background:
-        linear-gradient(
-            135deg,
-            #d8e7df,
-            #91b6a0
-        );
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.plant {
-
-    font-size: 100px;
-}
-@media (max-width: 768px) {
-
-    .mission-text {
-        padding: 55px 7%;
-    }
-
-    .mission h2 {
-        font-size: 23px !important;
-        line-height: 1.8;
-        letter-spacing: -0.03em;
-    }
-
-    .mission-text > p:not(.section-label) {
-        font-size: 14px;
-        line-height: 2.1;
-        color: #444;
-    }
-
-    .section-label {
-        font-size: 28px;
-        margin-bottom: 24px;
-    }
-
-}
 /* ==============================
-   Vision
+   COMMON
 ============================== */
 
-.vision {
-    padding: 120px 7.5%;
-    background: #f7f8f5;
+.section-label {
+    margin: 0 0 22px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 26px;
+    font-weight: 400;
+
+    letter-spacing: 0.1em;
+
+    color: #397c5b;
 }
 
-.vision-inner {
-    max-width: 1200px;
+
+.text-link,
+.section-more,
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #777;
+    border-radius: 999px;
+
+    font-size: 12px;
+
+    transition: 0.3s ease;
+}
+
+
+.text-link:hover,
+.section-more:hover,
+.contact-button:hover {
+    background: #397c5b;
+    border-color: #397c5b;
+    color: #fff;
+}
+
+
+
+/* ==============================
+   ABOUT
+============================== */
+
+.home-about {
+    padding: 120px 7.5%;
+
+    background: #fff;
+}
+
+
+.home-section-inner {
+    max-width: 1150px;
+
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 70px;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
     align-items: center;
 }
 
-/* 写真 */
-.vision-image {
-    width: 100%;
-    overflow: hidden;
-    order: 1;
-}
 
-.vision-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
+.home-section-heading h2 {
+    margin: 0;
 
-/* 文章 */
-.vision-content {
-    padding-left: 10px;
-    order: 2;
-}
+    font-family: Georgia, "Times New Roman", serif;
 
-.vision-content h2 {
-    margin: 25px 0 40px;
-    font-family: serif;
-    font-size: 34px;
+    font-size: 36px;
     font-weight: 400;
-    line-height: 1.8;
-    letter-spacing: 0.05em;
-}
 
-.vision-text {
-    margin-bottom: 25px;
-    color: #555;
-    font-size: 15px;
-    line-height: 2.2;
+    line-height: 1.65;
+
     letter-spacing: 0.04em;
 }
 
 
+.home-section-content {
+    max-width: 500px;
+}
+
+
+.home-section-content p {
+    margin: 0 0 25px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 2.2;
+
+    letter-spacing: 0.03em;
+}
+
+
+
 /* ==============================
-   Vision - スマホ
+   PHILOSOPHY
 ============================== */
 
-@media (max-width: 768px) {
+.home-philosophy {
+    padding: 130px 7.5%;
 
-    .vision {
-        padding: 80px 6%;
-    }
-
-    .vision-inner {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    /* スマホでは文章を上、写真を下 */
-    .vision-content {
-        order: 1;
-        padding-left: 0;
-    }
-
-    .vision-image {
-        order: 2;
-        width: 100%;
-    }
-
-    .vision-content h2 {
-        font-size: 25px;
-        line-height: 1.7;
-        margin: 20px 0 30px;
-    }
-
-    .vision-text {
-        font-size: 13px;
-        line-height: 2;
-        margin-bottom: 20px;
-    }
-
-}
-/* ====================
-   VALUES
-==================== */
-
-.values {
-
-    padding: 55px 5%;
-
-    background: #f7faf8;
+    background: #f7f8f5;
 }
 
 
-.section-heading h2 {
+.philosophy-inner {
+    max-width: 1150px;
 
-    font-size: 25px;
-
-    font-weight: 500;
-}
-
-
-.values-grid {
+    margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+.philosophy-heading h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    line-height: 1.7;
+
+    letter-spacing: 0.04em;
+}
+
+
+.philosophy-content p {
+    margin: 0 0 22px;
+
+    color: #555;
+
+    font-size: 14px;
+
+    line-height: 2.2;
+}
+
+
+
+/* ==============================
+   BUSINESS
+============================== */
+
+.home-business {
+    padding: 130px 7.5%;
+
+    background: #fff;
+}
+
+
+.home-business-heading {
+    max-width: 1150px;
+
+    margin: 0 auto 60px;
+}
+
+
+.home-business-heading h2 {
+    margin: 0 0 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+}
+
+
+.home-business-heading > p:last-child {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 2;
+}
+
+
+.business-list {
+    max-width: 1150px;
+
+    margin: 0 auto;
+
+    border-top: 1px solid #ddd;
+}
+
+
+.business-item {
+    display: grid;
+
+    grid-template-columns: 80px 1fr 50px;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 38px 10px;
+
+    border-bottom: 1px solid #ddd;
+
+    transition: 0.3s ease;
+}
+
+
+.business-item:hover {
+    padding-left: 20px;
+}
+
+
+.business-item-number {
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    color: #397c5b;
+}
+
+
+.business-item-content p {
+    margin: 0 0 8px;
+
+    color: #397c5b;
+
+    font-size: 10px;
+
+    letter-spacing: 0.12em;
+}
+
+
+.business-item-content h3 {
+    margin: 0 0 8px;
+
+    font-family: Georgia, serif;
+
+    font-size: 28px;
+
+    font-weight: 400;
+}
+
+
+.business-item-content span {
+    color: #666;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+.business-item-arrow {
+    font-size: 20px;
+}
+
+
+.section-more {
+    margin-top: 45px;
+}
+
+
+
+/* ==============================
+   NEWS
+============================== */
+
+.home-news {
+    padding: 110px 7.5%;
+
+    background: #f7f8f5;
+}
+
+
+.home-news-inner {
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+.home-news-heading h2 {
+    margin: 0 0 45px;
+
+    font-family: Georgia, serif;
+
+    font-size: 36px;
+
+    font-weight: 400;
+}
+
+
+.news-list {
+    border-top: 1px solid #ddd;
+}
+
+
+.news-item {
+    display: grid;
+
+    grid-template-columns: 120px 140px 1fr 30px;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 10px;
+
+    border-bottom: 1px solid #ddd;
+
+    transition: 0.3s ease;
+}
+
+
+.news-item:hover {
+    padding-left: 20px;
+}
+
+
+.news-date {
+    font-size: 12px;
+    color: #777;
+}
+
+
+.news-category {
+    font-size: 10px;
+
+    letter-spacing: 0.1em;
+
+    color: #397c5b;
+}
+
+
+.news-title {
+    font-size: 13px;
+}
+
+
+.news-arrow {
+    font-size: 17px;
+}
+
+
+
+/* ==============================
+   CONTACT
+============================== */
+
+.home-contact {
+    padding: 140px 7.5%;
+
+    background: #fff;
+}
+
+
+.home-contact-inner {
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+.home-contact-inner .section-label {
+    margin-bottom: 25px;
+}
+
+
+.home-contact h2 {
+    margin: 0 0 25px;
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+
+.home-contact p {
+    margin: 0 0 35px;
+
+    color: #666;
+
+    font-size: 13px;
+}
+
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+.footer {
+    padding: 55px 7.5%;
+
+    background: #f3f5f2;
+}
+
+
+.footer-inner {
+    max-width: 1150px;
+
+    margin: 0 auto;
+}
+
+
+.footer-logo img {
+    width: 130px;
+}
+
+
+.footer-navigation {
+    display: flex;
+
+    gap: 28px;
 
     margin-top: 35px;
 }
 
 
-.value {
-
-    padding: 20px 40px;
-
-    border-right:
-        1px solid #d8dedb;
-}
-
-
-.value:last-child {
-
-    border-right: none;
-}
-
-
-.value-number {
-
-    font-family: sans-serif;
-
-    font-size: 12px;
-
-    color: #397c5b;
-}
-
-
-.value h3 {
-
-    font-size: 20px;
-
-    margin-top: 8px;
-}
-
-
-.value p {
-
-    font-family: sans-serif;
-
-    font-size: 12px;
-
-    line-height: 1.8;
-
-    color: #666;
-
-    margin-top: 10px;
-}
-
-
-/* ====================
-   RESPONSIVE
-==================== */
-
-@media (max-width: 900px) {
-
-    .navigation {
-
-        display: none;
-    }
-
-
-    .logo {
-
-        min-width: auto;
-    }
-
-
-    .edumarket-button {
-
-        margin-left: auto;
-    }
-
-
-    .hero {
-
-        min-height: 500px;
-    }
-
-
-    .mission {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .mission-image {
-
-        min-height: 250px;
-    }
-
-
-    .values-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .value {
-
-        border-right: none;
-
-        border-bottom:
-            1px solid #d8dedb;
-
-        padding: 25px 0;
-    }
-
-
-    .value:last-child {
-
-        border-bottom: none;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    .header {
-
-        height: 65px;
-
-        padding: 0 20px;
-    }
-
-
-    .logo-text span {
-
-        font-size: 19px;
-    }
-
-
-    .logo-text small {
-
-        display: none;
-    }
-
-
-    .edumarket-button {
-
-        padding: 10px 15px;
-
-        font-size: 10px;
-    }
-
-
-    .hero {
-
-        min-height: 600px;
-
-        padding: 60px 25px;
-    }
-
-
-    .hero-catch {
-
-        font-size: 38px;
-
-        letter-spacing: 2px;
-    }
-
-
-    .hero-description {
-
-        font-size: 12px;
-    }
-
-
-    .hero-buttons {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-
-    .mission-text {
-
-        padding: 50px 25px;
-    }
-}
-/* Seedora Logo */
-
-.logo {
-    display: flex;
-    align-items: center;
-    width: 220px;
-}
-
-.logo img {
-    width: 100px;
-    height: auto;
-    display: block;
-}
-/* ====================
-   MISSION
-==================== */
-
-.mission {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    background: #fff;
-}
-
-/* 左側：文章 */
-.mission-content {
-    width: 42%;
-    padding: 65px 5%;
-    box-sizing: border-box;
-}
-
-.section-label {
-    margin: 0 0 18px;
-    font-size: 13px;
-    color: #3d7b62;
-    letter-spacing: 1px;
-}
-
-.mission h2 {
-    margin: 0 0 25px;
-    font-family: serif;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.55;
-    color: #222;
-}
-
-.mission-text {
-    margin: 0 0 28px;
-    font-size: 13px;
-    line-height: 2;
-    color: #666;
-}
-
-/* Missionボタン */
-.mission-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 22px;
-
-    padding: 10px 18px;
-    min-width: 120px;
-
-    border: 1px solid #777;
-    border-radius: 999px;
-
-    color: #333;
-    background: #fff;
-    text-decoration: none;
-    font-size: 13px;
-
-    transition: 0.3s ease;
-}
-
-.mission-button span {
-    font-size: 16px;
-}
-
-.mission-button:hover {
-    background: #3d7b62;
-    color: #fff;
-    border-color: #3d7b62;
-}
-
-/* 右側：画像 */
-.mission-image {
-    width: 58%;
-    aspect-ratio: 1.75 / 1;
-    overflow: hidden;
-}
-
-.mission-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-}
-/* ====================
-   VALUES
-==================== */
-
-.values {
-    width: 100%;
-    padding: 120px 8%;
-    box-sizing: border-box;
-    background: #f7f8f5;
-}
-
-/* 見出し */
-
-.values .section-heading {
-    max-width: 760px;
-    margin: 0 auto 80px;
-    text-align: center;
-}
-
-.values .section-label {
-    margin: 0 0 18px;
-    font-size: 13px;
-    color: #3d7b62;
-    letter-spacing: 2px;
-}
-
-.values .section-heading h2 {
-    margin: 0;
-    font-family: serif;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #222;
-}
-
-
-/* 3つの価値観 */
-
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 1100px;
-    margin: 0 auto;
-    border-top: 1px solid #d8ddd8;
-}
-
-
-/* 各Value */
-
-.value {
-    position: relative;
-    padding: 55px 45px 45px;
-    border-right: 1px solid #d8ddd8;
-    box-sizing: border-box;
-}
-
-.value:last-child {
-    border-right: none;
-}
-
-
-/* 番号 */
-
-.value-number {
-    display: block;
-    margin-bottom: 35px;
-
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #3d7b62;
-}
-
-
-/* タイトル */
-
-.value h3 {
-    margin: 0 0 25px;
-
-    font-family: serif;
-    font-size: 25px;
-    font-weight: 400;
-    color: #222;
-}
-
-
-/* 説明 */
-
-.value p {
-    margin: 0;
-
-    font-size: 13px;
-    line-height: 2.2;
-    color: #666;
-}
-
-
-/* ====================
-   VALUES RESPONSIVE
-==================== */
-
-@media (max-width: 768px) {
-
-    .values {
-        padding: 80px 7%;
-    }
-
-    .values .section-heading {
-        margin-bottom: 50px;
-    }
-
-    .values .section-heading h2 {
-        font-size: 26px;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .value {
-        padding: 40px 10px;
-        border-right: none;
-        border-bottom: 1px solid #d8ddd8;
-    }
-
-    .value:last-child {
-        border-bottom: none;
-    }
-
-}
-/* ====================
-   BUSINESS
-==================== */
-
-.business {
-    width: 100%;
-    padding: 120px 8%;
-    box-sizing: border-box;
-    background: #f7f8f5;
-}
-
-
-/* 見出し */
-
-.business .section-heading {
-    max-width: 760px;
-    margin: 0 auto 75px;
-    text-align: center;
-}
-
-.business .section-label {
-    margin: 0 0 18px;
-
-    font-size: 13px;
-    color: #3d7b62;
-    letter-spacing: 2px;
-}
-
-.business .section-heading h2 {
-    margin: 0 0 25px;
-
-    font-family: serif;
-    font-size: 34px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #222;
-}
-
-.business-lead {
-    margin: 0;
-
-    font-size: 13px;
-    line-height: 2.1;
-    color: #666;
-}
-
-
-/* ====================
-   BUSINESS CARD
-==================== */
-
-.business-card {
-    display: flex;
-    align-items: center;
-
-    width: 100%;
-    max-width: 1100px;
-    height: 340px;
-
-    margin: 0 auto 30px;
-    padding: 45px 50px;
-
-    box-sizing: border-box;
-
-    background: #fff;
-    border: 1px solid #d8ddd8;
-
-    overflow: hidden;
-}
-
-
-/* 番号 */
-
-.business-number {
-    width: 70px;
-
-    align-self: flex-start;
-
-    padding-top: 5px;
-
-    font-size: 12px;
-    letter-spacing: 2px;
-    color: #3d7b62;
-}
-
-
-/* コンテンツ */
-
-.business-content {
-    flex: 1;
-}
-
-.business-category {
-    margin: 0 0 12px;
-
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #888;
-}
-
-.business-content h3 {
-    margin: 0 0 20px;
-
-    font-family: serif;
-    font-size: 34px;
-    font-weight: 400;
-    color: #222;
-}
-
-.business-description {
-    margin: 0 0 30px;
-
-    font-size: 13px;
-    line-height: 2;
-    color: #666;
-}
-
-
-/* ボタン */
-
-.business-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 35px;
-
-    padding: 11px 18px;
-
-    border: 1px solid #777;
-    border-radius: 999px;
-
-    color: #333;
-    text-decoration: none;
-
-    font-size: 13px;
-
-    transition: 0.3s ease;
-}
-
-.business-button span {
-    font-size: 17px;
-}
-
-.business-button:hover {
-    background: #3d7b62;
-    color: #fff;
-}
-/* ====================
-   BUSINESS IMAGE
-==================== */
-
-.business-image {
-    width: 320px;
-    height: 300px;
-
-    margin-left: 50px;
-
-    overflow: hidden;
-    flex-shrink: 0;
-}
-
-.business-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-
-    display: block;
-}
-
-/* ====================
-   BUSINESS RESPONSIVE
-==================== */
-
-@media (max-width: 768px) {
-
-    .business {
-        padding: 80px 7%;
-    }
-
-    .business .section-heading {
-        margin-bottom: 50px;
-    }
-
-    .business .section-heading h2 {
-        font-size: 28px;
-    }
-
-    .business-card {
-        display: block;
-
-        min-height: auto;
-
-        padding: 40px 30px;
-    }
-
-    .business-number {
-        width: auto;
-        margin-bottom: 30px;
-    }
-
-    .business-content h3 {
-        font-size: 28px;
-    }
-
-}
-/* ====================
-   ABOUT SEEDORA
-==================== */
-
-.about-seedora {
-    width: 100%;
-    padding: 130px 8%;
-    box-sizing: border-box;
-    background: #ffffff;
-}
-
-.about-seedora-inner {
-    display: flex;
-    align-items: flex-start;
-
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* 左側 */
-
-.about-seedora-heading {
-    width: 50%;
-    padding-right: 60px;
-    box-sizing: border-box;
-}
-
-.about-seedora-heading .section-label {
-    margin: 0 0 20px;
-
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #3d7b62;
-}
-
-.about-seedora-heading h2 {
-    margin: 0;
-
-    font-family: serif;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 1.65;
-
-    color: #222;
-}
-
-
-/* 右側 */
-
-.about-seedora-content {
-    width: 50%;
-    padding-top: 40px;
-}
-
-.about-seedora-content p {
-    margin: 0 0 25px;
-
-    font-size: 14px;
-    line-height: 2.2;
-
-    color: #666;
-}
-
-
-/* ボタン */
-
-.about-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-
-    margin-top: 10px;
-    padding: 11px 18px;
-
-    min-width: 145px;
-
-    border: 1px solid #777;
-    border-radius: 999px;
-
-    color: #333;
-    text-decoration: none;
-
-    font-size: 13px;
-
-    transition: 0.3s ease;
-}
-
-.about-button span {
-    font-size: 17px;
-}
-
-.about-button:hover {
-    background: #3d7b62;
-    border-color: #3d7b62;
-    color: #fff;
-}
-
-
-/* ====================
-   ABOUT RESPONSIVE
-==================== */
-
-@media (max-width: 768px) {
-
-    .about-seedora {
-        padding: 80px 7%;
-    }
-
-    .about-seedora-inner {
-        display: block;
-    }
-
-    .about-seedora-heading {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .about-seedora-heading h2 {
-        font-size: 30px;
-    }
-
-    .about-seedora-content {
-        width: 100%;
-        padding-top: 40px;
-    }
-
-}
-/* ====================
-   NEWS
-==================== */
-
-.news {
-    width: 100%;
-    padding: 120px 8%;
-    box-sizing: border-box;
-    background: #f7f8f5;
-}
-
-.news-inner {
-    display: flex;
-    align-items: flex-start;
-
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-
-/* 左側 */
-
-.news-heading {
-    width: 30%;
-}
-
-.news-heading .section-label {
-    margin: 0 0 18px;
-
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #3d7b62;
-}
-
-.news-heading h2 {
-    margin: 0;
-
-    font-family: serif;
-    font-size: 34px;
-    font-weight: 400;
-
-    color: #222;
-}
-
-
-/* 右側 */
-
-.news-list {
-    width: 70%;
-    border-top: 1px solid #d8ddd8;
-}
-
-
-/* News 1件 */
-
-.news-item {
-    display: grid;
-
-    grid-template-columns: 105px 125px 1fr 30px;
-    align-items: center;
-
-    min-height: 85px;
-
-    border-bottom: 1px solid #d8ddd8;
-
-    text-decoration: none;
-    color: #333;
-
-    transition: 0.3s ease;
-}
-
-
-/* 日付 */
-
-.news-date {
+.footer-navigation a {
     font-size: 11px;
-    letter-spacing: 1px;
-    color: #888;
-}
-
-
-/* カテゴリー */
-
-.news-category {
-    font-size: 9px;
-    letter-spacing: 1.5px;
-    color: #3d7b62;
-}
-
-
-/* タイトル */
-
-.news-title {
-    font-size: 13px;
-    line-height: 1.8;
-}
-
-
-/* 矢印 */
-
-.news-arrow {
-    font-size: 17px;
-    text-align: right;
-
-    transition: 0.3s ease;
-}
-
-
-/* ホバー */
-
-.news-item:hover {
-    color: #3d7b62;
-}
-
-.news-item:hover .news-arrow {
-    transform: translateX(5px);
-}
-
-
-/* ====================
-   NEWS RESPONSIVE
-==================== */
-
-@media (max-width: 768px) {
-
-    .news {
-        padding: 80px 7%;
-    }
-
-    .news-inner {
-        display: block;
-    }
-
-    .news-heading {
-        width: 100%;
-        margin-bottom: 45px;
-    }
-
-    .news-heading h2 {
-        font-size: 30px;
-    }
-
-    .news-list {
-        width: 100%;
-    }
-
-    .news-item {
-        grid-template-columns: 90px 1fr 25px;
-        min-height: 100px;
-    }
-
-    .news-category {
-        display: none;
-    }
-
-    .news-title {
-        padding: 0 10px;
-    }
-
-}
-/* ====================
-   CONTACT
-==================== */
-
-.contact {
-    width: 100%;
-    padding: 130px 8%;
-    box-sizing: border-box;
-    background: #ffffff;
-    text-align: center;
-}
-
-.contact-inner {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact .section-label {
-    margin: 0 0 20px;
-
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #3d7b62;
-}
-
-.contact h2 {
-    margin: 0 0 25px;
-
-    font-family: serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.6;
-
-    color: #222;
-}
-
-.contact-text {
-    margin: 0 0 35px;
-
-    font-size: 13px;
-    line-height: 2.1;
-
-    color: #666;
-}
-
-
-/* ボタン */
-
-.contact-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 45px;
-
-    padding: 13px 22px;
-
-    min-width: 160px;
-
-    border-radius: 999px;
-    border: 1px solid #3d7b62;
-
-    background: #3d7b62;
-    color: #fff;
-
-    text-decoration: none;
-    font-size: 13px;
-
-    transition: 0.3s ease;
-}
-
-.contact-button span {
-    font-size: 17px;
-}
-
-.contact-button:hover {
-    background: #2f624e;
-    border-color: #2f624e;
-    transform: translateY(-2px);
-}
-
-
-/* ====================
-   CONTACT RESPONSIVE
-==================== */
-
-@media (max-width: 768px) {
-
-    .contact {
-        padding: 90px 7%;
-    }
-
-    .contact h2 {
-        font-size: 28px;
-    }
-
-}
-/* ====================
-   FOOTER
-==================== */
-
-.footer {
-    width: 100%;
-    background: #263b32;
-    color: #fff;
-}
-
-.footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 65px 8% 25px;
-    box-sizing: border-box;
-}
-
-
-/* 上部分 */
-
-.footer-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    padding-bottom: 55px;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-
-/* ブランド */
-
-.footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.footer-logo {
-    display: inline-block;
-}
-
-.footer-logo img {
-    display: block;
-    width: 135px;
-    height: auto;
-}
-
-.footer-brand p {
-    margin: 0;
-
-    font-family: serif;
-    font-size: 13px;
-    letter-spacing: 1px;
-
-    color: rgba(255, 255, 255, 0.75);
-}
-
-
-/* ナビ */
-
-.footer-nav {
-    display: flex;
-    align-items: center;
-    gap: 35px;
-
-    padding-top: 10px;
-}
-
-.footer-nav a {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none;
-
-    font-size: 12px;
-    letter-spacing: 1px;
-
-    transition: 0.3s ease;
-}
-
-.footer-nav a:hover {
-    color: #fff;
-}
-
-
-/* 下部分 */
-
-.footer-bottom {
-    padding-top: 22px;
-}
-
-.footer-bottom p {
-    margin: 0;
-
-    font-size: 10px;
-    letter-spacing: 1px;
-
-    color: rgba(255, 255, 255, 0.45);
-}
-
-
-/* ====================
-   FOOTER RESPONSIVE
-==================== */
-
-@media (max-width: 768px) {
-
-    .footer-inner {
-        padding: 55px 7% 22px;
-    }
-
-    .footer-top {
-        display: block;
-        padding-bottom: 40px;
-    }
-
-    .footer-nav {
-        flex-wrap: wrap;
-        gap: 20px 28px;
-
-        margin-top: 40px;
-        padding-top: 0;
-    }
-
-}
-/* ====================
-   CONTACT PAGE
-==================== */
-
-.contact-page {
-    width: 100%;
-    padding: 130px 8% 140px;
-    box-sizing: border-box;
-    background: #fff;
-}
-
-
-/* 見出し */
-
-.contact-heading {
-    max-width: 900px;
-    margin: 0 auto 80px;
-    text-align: center;
-}
-
-.contact-heading .section-label {
-    margin: 0 0 22px;
-
-    font-size: 13px;
-    letter-spacing: 2px;
-
-    color: #3d7b62;
-}
-
-.contact-heading h1 {
-    margin: 0 0 28px;
-
-    font-family: serif;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 1.6;
-
-    color: #222;
-}
-
-.contact-lead {
-    margin: 0;
-
-    font-size: 13px;
-    line-height: 2.2;
-
-    color: #666;
-}
-
-
-/* ====================
-   FORM
-==================== */
-
-.contact-form {
-    max-width: 760px;
-    margin: 0 auto;
-}
-
-
-/* 各項目 */
-
-.form-item {
-    margin-bottom: 32px;
-}
-
-
-/* ラベル */
-
-.form-item label {
-    display: block;
-
-    margin-bottom: 10px;
-
-    font-size: 13px;
-    letter-spacing: 1px;
-
-    color: #333;
-}
-
-
-/* 入力欄 */
-
-.form-item input,
-.form-item textarea {
-
-    width: 100%;
-
-    padding: 15px 16px;
-
-    box-sizing: border-box;
-
-    border: 1px solid #d8ddd8;
-
-    background: #fafbf9;
-
-    font-family: inherit;
-    font-size: 13px;
-
-    color: #333;
-
-    outline: none;
-
-    transition: 0.3s ease;
-}
-
-
-/* フォーカス時 */
-
-.form-item input:focus,
-.form-item textarea:focus {
-
-    border-color: #3d7b62;
-
-    background: #fff;
-}
-
-
-/* textarea */
-
-.form-item textarea {
-
-    resize: vertical;
-
-    line-height: 1.8;
-}
-
-
-/* プレースホルダー */
-
-.form-item input::placeholder,
-.form-item textarea::placeholder {
-
-    color: #aaa;
-}
-
-
-/* ====================
-   SEND BUTTON
-==================== */
-
-.contact-submit {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 190px;
-
-    margin: 50px auto 0;
-
-    padding: 14px 20px;
-
-    border: 1px solid #3d7b62;
-    border-radius: 999px;
-
-    background: #3d7b62;
-
-    color: #fff;
-
-    font-family: inherit;
-    font-size: 13px;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
-}
-
-.contact-submit span {
-    font-size: 17px;
-}
-
-.contact-submit:hover {
-
-    background: #fff;
-
-    color: #3d7b62;
-}
-
-
-/* ====================
-   CONTACT RESPONSIVE
-==================== */
-
-@media (max-width: 768px) {
-
-    .contact-page {
-        padding: 90px 7% 100px;
-    }
-
-    .contact-heading {
-        margin-bottom: 55px;
-    }
-
-    .contact-heading h1 {
-        font-size: 28px;
-    }
-
-    .contact-lead {
-        font-size: 12px;
-    }
-
-    .form-item {
-        margin-bottom: 25px;
-    }
-
-    .contact-submit {
-        width: 180px;
-    }
-
-}
-/* ====================
-   THANKS PAGE
-==================== */
-
-.thanks-page {
-    width: 100%;
-    min-height: 650px;
-    padding: 130px 8% 140px;
-    box-sizing: border-box;
-    background: #fff;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.thanks-inner {
-    width: 100%;
-    max-width: 800px;
-    text-align: center;
-}
-
-.thanks-inner .section-label {
-    margin: 0 0 22px;
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #3d7b62;
-}
-
-.thanks-inner h1 {
-    margin: 0 0 30px;
-    font-family: serif;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #222;
-}
-
-.thanks-text {
-    margin: 0;
-    font-size: 13px;
-    line-height: 2.2;
-    color: #666;
-}
-
-.thanks-button {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    width: 220px;
-
-    margin: 50px auto 0;
-    padding: 14px 20px;
-
-    box-sizing: border-box;
-
-    border: 1px solid #3d7b62;
-    border-radius: 999px;
-
-    background: #3d7b62;
-    color: #fff;
-
-    font-size: 13px;
-    text-decoration: none;
-
-    transition: 0.3s ease;
-}
-
-.thanks-button span {
-    font-size: 17px;
-}
-
-.thanks-button:hover {
-    background: #fff;
-    color: #3d7b62;
-}
-
-
-/* ====================
-   THANKS PAGE - MOBILE
-==================== */
-
-@media (max-width: 768px) {
-
-    .thanks-page {
-        min-height: 550px;
-        padding: 90px 7% 100px;
-    }
-
-    .thanks-inner h1 {
-        font-size: 28px;
-    }
-
-    .thanks-text {
-        font-size: 12px;
-    }
-
-    .thanks-button {
-        width: 200px;
-    }
-
-}
-/* ====================
-   MOBILE FINAL FIX
-==================== */
-
-@media (max-width: 768px) {
-
-    /* ====================
-       HEADER
-    ==================== */
-
-    .header {
-        height: 72px;
-        padding: 0 18px;
-    }
-
-    .logo {
-        width: auto;
-        min-width: 0;
-    }
-
-    .logo img {
-        width: 90px;
-    }
-
-    .edumarket-button {
-        margin-left: auto;
-        padding: 11px 16px;
-        font-size: 11px;
-        gap: 15px;
-    }
-
-
-    /* ====================
-       HERO
-    ==================== */
-
-    .hero {
-        height: 620px;
-        min-height: 0;
-        aspect-ratio: auto;
-        background-size: cover;
-        background-position: center;
-    }
-
-    .hero-buttons {
-        left: 7%;
-        right: 7%;
-        bottom: 7%;
-
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .hero-buttons a {
-        width: 100%;
-        max-width: 390px;
-        min-width: 0;
-        box-sizing: border-box;
-        padding: 15px 20px;
-        font-size: 13px;
-    }
-
-
-/* ====================
-   MISSION
-==================== */
-
-.mission {
-    display: block;
-    width: 100%;
-    padding-bottom: 40px;
-    background: #fff;
-}
-
-
-/* Mission テキスト */
-
-.mission-content {
-    width: 100%;
-    padding: 70px 7% 55px;
-    box-sizing: border-box;
-}
-
-.mission h2 {
-    font-size: 30px;
-    line-height: 1.65;
-    margin-bottom: 25px;
-}
-
-.mission-text {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-    line-height: 2.1;
-}
-
-
-/* ====================
-   Mission画像
-==================== */
-
-.mission-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #fff;
-}
-
-.mission-image img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-
-/* ====================
-   Mission → Values
-==================== */
-
-.values {
-    padding-top: 60px;
-}
-    /* ====================
-       VALUES
-    ==================== */
-
-    .values {
-        padding: 85px 7%;
-    }
-
-    .values .section-heading {
-        margin-bottom: 55px;
-    }
-
-    .values .section-heading h2 {
-        font-size: 27px;
-        line-height: 1.7;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .value {
-        padding: 45px 10px;
-        border-right: none;
-        border-bottom: 1px solid #d8ddd8;
-    }
-
-    .value h3 {
-        font-size: 27px;
-    }
-
-    .value p {
-        font-size: 14px;
-        line-height: 2.2;
-    }
-
-
-    /* ====================
-       BUSINESS
-    ==================== */
-
-    .business {
-        padding: 90px 7%;
-    }
-
-    .business .section-heading {
-        margin-bottom: 55px;
-    }
-
-    .business .section-heading h2 {
-        font-size: 28px;
-        line-height: 1.7;
-    }
-
-    .business-lead {
-        font-size: 13px;
-        line-height: 2.2;
-    }
-
-    .business-card {
-        display: block;
-        width: 100%;
-        height: auto;
-        min-height: 0;
-
-        margin: 0 auto 25px;
-        padding: 40px 30px;
-
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .business-number {
-        width: auto;
-        margin-bottom: 30px;
-        padding-top: 0;
-    }
-
-    .business-content {
-        width: 100%;
-    }
-
-    .business-content h3 {
-        font-size: 29px;
-        line-height: 1.4;
-    }
-
-    .business-description {
-        font-size: 13px;
-        line-height: 2.1;
-    }
-
-    .business-button {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .business-image {
-        width: 100%;
-        height: 220px;
-
-        margin: 35px 0 0;
-
-        overflow: hidden;
-    }
-
-    .business-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-
-    /* ====================
-       ABOUT
-    ==================== */
-
-    .about-seedora {
-        padding: 90px 7%;
-    }
-
-    .about-seedora-inner {
-        display: block;
-    }
-
-    .about-seedora-heading {
-        width: 100%;
-        padding-right: 0;
-    }
-
-    .about-seedora-heading h2 {
-        font-size: 31px;
-        line-height: 1.7;
-    }
-
-    .about-seedora-content {
-        width: 100%;
-        padding-top: 45px;
-    }
-
-    .about-seedora-content p {
-        font-size: 14px;
-        line-height: 2.2;
-    }
-
-
-    /* ====================
-       NEWS
-    ==================== */
-
-    .news {
-        padding: 85px 7%;
-    }
-
-    .news-inner {
-        display: block;
-    }
-
-    .news-heading {
-        width: 100%;
-        margin-bottom: 50px;
-    }
-
-    .news-heading h2 {
-        font-size: 31px;
-    }
-
-    .news-list {
-        width: 100%;
-    }
-
-    .news-item {
-        grid-template-columns: 90px 1fr 25px;
-        min-height: 100px;
-    }
-
-    .news-category {
-        display: none;
-    }
-
-    .news-title {
-        padding: 0 10px;
-        font-size: 13px;
-        line-height: 1.8;
-    }
-
-
-    /* ====================
-       CONTACT
-    ==================== */
-
-    .contact {
-        padding: 100px 7%;
-    }
-
-    .contact h2 {
-        font-size: 29px;
-        line-height: 1.7;
-    }
-
-    .contact-text {
-        font-size: 13px;
-        line-height: 2.2;
-    }
-
-
-    /* ====================
-       FOOTER
-    ==================== */
-
-    .footer-inner {
-        padding: 60px 7% 25px;
-    }
-
-    .footer-top {
-        display: block;
-        padding-bottom: 45px;
-    }
-
-    .footer-logo img {
-        width: 135px;
-    }
-
-    .footer-nav {
-        flex-wrap: wrap;
-        gap: 20px 28px;
-        margin-top: 40px;
-        padding-top: 0;
-    }
-
-}
-@media (max-width: 768px) {
-
-    /* Mission画像をスマホでは全体表示 */
-    .mission-image {
-        width: 100%;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-    }
-
-    .mission-image img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: contain;
-    }
-
-}
-@media (max-width: 768px) {
-
-    .mission {
-        padding-bottom: 90px;
-    }
-
-    .values {
-        padding-top: 90px;
-    }
-
-}
-/* ====================
-   NEWS ARTICLE
-==================== */
-
-.news-article {
-    width: 100%;
-    padding: 130px 7% 140px;
-
-    background: #ffffff;
-
-    box-sizing: border-box;
-}
-
-
-.news-article-inner {
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-
-/* ====================
-   ARTICLE HEADER
-==================== */
-
-.news-article-header {
-    padding-bottom: 55px;
-
-    border-bottom: 1px solid #d8ddd8;
-}
-
-
-.news-article-header .section-label {
-    margin: 0 0 18px;
-
-    font-family: sans-serif;
-    font-size: 12px;
-
-    letter-spacing: 2px;
-
-    color: #3d7b62;
-}
-
-
-.news-article-date {
-    margin: 0 0 28px;
-
-    font-family: sans-serif;
-    font-size: 12px;
-
-    color: #888;
-}
-
-
-.news-article-header h1 {
-    margin: 0;
-
-    font-family: serif;
-    font-size: 40px;
-    font-weight: 400;
-
-    line-height: 1.7;
-
-    color: #222;
-}
-
-
-/* ====================
-   ARTICLE BODY
-==================== */
-
-.news-article-body {
-    padding: 60px 0 20px;
-}
-
-
-.news-article-body p {
-    margin: 0 0 32px;
-
-    font-size: 14px;
-
-    line-height: 2.4;
 
     color: #555;
 }
 
 
-.news-article-body strong {
-    font-weight: 500;
-    color: #333;
+.copyright {
+    margin: 35px 0 0;
+
+    color: #999;
+
+    font-size: 10px;
 }
 
 
-/* 引用 */
 
-.news-article-body blockquote {
-    margin: 45px 0;
-
-    padding: 28px 35px;
-
-    border-left: 2px solid #3d7b62;
-
-    background: #f7f8f5;
-
-    font-family: serif;
-    font-size: 17px;
-
-    line-height: 2;
-
-    color: #333;
-}
-
-
-/* ====================
-   BACK BUTTON
-==================== */
-
-.news-article-footer {
-    padding-top: 45px;
-
-    border-top: 1px solid #d8ddd8;
-
-    text-align: center;
-}
-
-
-.news-back-button {
-    display: inline-flex;
-
-    align-items: center;
-    gap: 15px;
-
-    padding: 13px 22px;
-
-    border: 1px solid #777;
-
-    border-radius: 999px;
-
-    font-family: sans-serif;
-    font-size: 13px;
-
-    color: #333;
-
-    transition: 0.3s ease;
-}
-
-
-.news-back-button span {
-    font-size: 17px;
-}
-
-
-.news-back-button:hover {
-    background: #3d7b62;
-
-    border-color: #3d7b62;
-
-    color: #ffffff;
-}
-
-
-/* ====================
+/* ==============================
    MOBILE
-==================== */
+============================== */
 
 @media (max-width: 768px) {
 
-    .news-article {
-        padding: 85px 7% 100px;
+
+    .header {
+        height: 65px;
+
+        padding: 0 6%;
     }
 
 
-    .news-article-header {
-        padding-bottom: 40px;
+    .logo img {
+        width: 120px;
     }
 
 
-    .news-article-header h1 {
-        font-size: 28px;
-        line-height: 1.7;
+    .navigation,
+    .header-button {
+        display: none;
     }
 
 
-    .news-article-body {
-        padding-top: 40px;
+    .menu-button {
+        display: block;
     }
 
 
-    .news-article-body p {
-        font-size: 13px;
-        line-height: 2.2;
+    .mobile-menu {
+        position: absolute;
 
-        margin-bottom: 28px;
-    }
+        top: 65px;
+        left: 0;
 
-
-    .news-article-body blockquote {
-        margin: 35px 0;
-
-        padding: 22px 20px;
-
-        font-size: 15px;
-    }
-/* ====================
-   NEWS ARTICLE - MOBILE
-==================== */
-
-@media (max-width: 768px) {
-
-    .news-article {
-        padding: 70px 7% 90px;
-        box-sizing: border-box;
-    }
-
-    .news-article-inner {
         width: 100%;
-        max-width: 760px;
-        margin: 0 auto;
+
+        padding: 20px 7% 30px;
+
+        background: #fff;
+
+        border-top: 1px solid #eee;
+
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     }
 
-    .news-article h1 {
-        font-size: 30px;
-        line-height: 1.7;
-        margin-bottom: 30px;
+
+    .mobile-menu.active {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 22px;
     }
 
-    .news-article p {
-        font-size: 15px;
-        line-height: 2.1;
-        margin-bottom: 25px;
+
+    .mobile-menu a {
+        font-size: 13px;
     }
 
-}
 
-    .news-back-button {
+    /* HERO */
+
+    .hero-buttons {
+        left: 7%;
+        right: 7%;
+        bottom: 22px;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .button {
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 13px 18px;
+
         font-size: 12px;
     }
 
-}
-/* ==============================
-   Opening Animation
-============================== */
 
-.opening {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
+    /* COMMON */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    .section-label {
+        font-size: 28px;
 
-    background: #ffffff;
-
-    animation: openingFadeOut 1.5s ease forwards;
-    animation-delay: 2.8s;
-}
-
-.opening img {
-    width: 260px;
-    max-width: 55vw;
-    height: auto;
-
-    opacity: 0;
-    transform: translateY(12px) scale(0.98);
-
-    animation: logoAppear 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-}
-
-
-/* ロゴがゆっくり現れる */
-
-@keyframes logoAppear {
-
-    0% {
-        opacity: 0;
-        transform: translateY(12px) scale(0.98);
+        margin-bottom: 25px;
     }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0) scale(1);
+
+    /* ABOUT */
+
+    .home-about {
+        padding: 80px 7%;
     }
 
-}
 
-
-/* Openingをゆっくり消す */
-
-@keyframes openingFadeOut {
-
-    0% {
-        opacity: 1;
+    .home-section-inner {
+        display: block;
     }
 
-    70% {
-        opacity: 1;
+
+    .home-section-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.7;
+
+        margin-bottom: 40px;
     }
 
-    100% {
-        opacity: 0;
-        pointer-events: none;
+
+    .home-section-content p {
+        font-size: 13px;
+
+        line-height: 2.1;
     }
 
-}
 
+    /* PHILOSOPHY */
 
-/* ==============================
-   Smartphone
-============================== */
-
-@media (max-width: 768px) {
-
-    .opening img {
-        width: 210px;
-        max-width: 60vw;
+    .home-philosophy {
+        padding: 85px 7%;
     }
 
-}
-/* ==============================
-   Hero Entrance Animation
-============================== */
 
-.hero {
-    opacity: 0;
-    animation: heroAppear 1.8s ease forwards;
-    animation-delay: 3.2s;
-}
-
-@keyframes heroAppear {
-
-    0% {
-        opacity: 0;
-        transform: scale(1.015);
+    .philosophy-inner {
+        display: block;
     }
 
-    100% {
-        opacity: 1;
-        transform: scale(1);
+
+    .philosophy-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.75;
+
+        margin-bottom: 40px;
     }
 
-}
 
+    .philosophy-content p {
+        font-size: 13px;
 
-/* ==============================
-   Smartphone
-============================== */
-
-@media (max-width: 768px) {
-
-    .hero {
-        animation-delay: 3.8s;
-        animation-duration: 1.8s;
+        line-height: 2.1;
     }
 
-}
-/* ==============================
-   Mission Scroll Animation
-============================== */
 
-.mission-animation {
-    opacity: 0;
-    transform: translateY(35px);
+    /* BUSINESS */
 
-    transition:
-        opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 1s cubic-bezier(0.22, 1, 0.36, 1);
-}
+    .home-business {
+        padding: 85px 7%;
+    }
 
 
-/* 表示されたとき */
-
-.mission-animation.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+    .home-business-heading {
+        margin-bottom: 40px;
+    }
 
 
-/* ==============================
-   表示タイミング
-============================== */
+    .home-business-heading h2 {
+        font-size: 28px;
 
-.mission-label {
-    transition-delay: 0s;
-}
-
-.mission-title {
-    transition-delay: 0.15s;
-}
-
-.mission-description {
-    transition-delay: 0.3s;
-}
-
-.mission-image-animation {
-    transition-delay: 0.45s;
-}
+        line-height: 1.7;
+    }
 
 
-/* ==============================
-   Smartphone
-============================== */
+    .home-business-heading > p:last-child {
+        font-size: 13px;
 
-@media (max-width: 768px) {
+        line-height: 2.1;
+    }
 
-    .mission-animation {
-        transform: translateY(25px);
+
+    .business-item {
+        grid-template-columns: 45px 1fr 25px;
+
+        gap: 15px;
+
+        padding: 28px 5px;
+    }
+
+
+    .business-item-content h3 {
+        font-size: 23px;
+    }
+
+
+    .business-item-content span {
+        font-size: 12px;
+    }
+
+
+    /* NEWS */
+
+    .home-news {
+        padding: 80px 7%;
+    }
+
+
+    .home-news-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .news-item {
+        grid-template-columns: 1fr 25px;
+
+        gap: 8px;
+    }
+
+
+    .news-date,
+    .news-category {
+        grid-column: 1;
+    }
+
+
+    .news-title {
+        grid-column: 1;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+
+    .news-arrow {
+        grid-column: 2;
+
+        grid-row: 1 / 4;
+    }
+
+
+    /* CONTACT */
+
+    .home-contact {
+        padding: 100px 7%;
+    }
+
+
+    .home-contact h2 {
+        font-size: 29px;
+
+        line-height: 1.7;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 45px 7%;
+    }
+
+
+    .footer-navigation {
+        flex-direction: column;
+
+        gap: 17px;
+
+        margin-top: 30px;
     }
 
 }
