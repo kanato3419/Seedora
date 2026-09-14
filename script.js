@@ -1,47 +1,35 @@
-const menuButton = document.querySelector(".menu-button");
-const mobileMenu = document.querySelector(".mobile-menu");
-
-menuButton.addEventListener("click", function () {
-    mobileMenu.classList.toggle("active");
-});
 /* ==============================
-   Opening Animation
+   Mobile Menu
 ============================== */
 
-const opening = document.querySelector(".opening");
+const menuButton =
+    document.querySelector(".menu-button");
 
-if (opening) {
+const mobileMenu =
+    document.querySelector(".mobile-menu");
 
-    setTimeout(() => {
-        opening.classList.add("opening-hidden");
-    }, 4900);
 
-}
-/* ==============================
-   Mission Scroll Animation
-============================== */
+if (menuButton && mobileMenu) {
 
-const missionAnimations =
-    document.querySelectorAll(".mission-animation");
+    menuButton.addEventListener("click", () => {
 
-const missionObserver = new IntersectionObserver(
-    (entries) => {
+        mobileMenu.classList.toggle("active");
 
-        entries.forEach((entry) => {
+    });
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-            }
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            mobileMenu.classList.remove("active");
 
         });
 
-    },
-    {
-        threshold: 0.2
-    }
-);
+    });
 
-
-missionAnimations.forEach((element) => {
-    missionObserver.observe(element);
-});
+}
