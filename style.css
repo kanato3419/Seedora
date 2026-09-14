@@ -2803,7 +2803,7 @@ main {
     background: #ffffff;
 
     animation: openingFadeOut 1.5s ease forwards;
-    animation-delay: 3.4s;
+    animation-delay: 2.8s;
 }
 
 .opening img {
@@ -2874,7 +2874,7 @@ main {
 .hero {
     opacity: 0;
     animation: heroAppear 1.8s ease forwards;
-    animation-delay: 3.8s;
+    animation-delay: 3.2s;
 }
 
 @keyframes heroAppear {
