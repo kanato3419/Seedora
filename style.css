@@ -603,8 +603,9 @@ main {
     }
 
     .mission h2 {
-        font-size: 24px;
+        font-size: 23px !important;
         line-height: 1.8;
+        letter-spacing: -0.03em;
     }
 
     .mission-text > p:not(.section-label) {
@@ -614,7 +615,7 @@ main {
     }
 
     .section-label {
-        font-size: 27px;
+        font-size: 28px;
         margin-bottom: 24px;
     }
 
