@@ -17,3 +17,31 @@ if (opening) {
     }, 4900);
 
 }
+/* ==============================
+   Mission Scroll Animation
+============================== */
+
+const missionAnimations =
+    document.querySelectorAll(".mission-animation");
+
+const missionObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+
+missionAnimations.forEach((element) => {
+    missionObserver.observe(element);
+});
