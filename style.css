@@ -2802,7 +2802,7 @@ main {
 
     background: #ffffff;
 
-    animation: openingFadeOut 1.2s ease forwards;
+    animation: openingFadeOut 1.5s ease forwards;
     animation-delay: 3.4s;
 }
 
@@ -2814,7 +2814,7 @@ main {
     opacity: 0;
     transform: translateY(12px) scale(0.98);
 
-    animation: logoAppear 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation: logoAppear 2.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 
@@ -2835,18 +2835,20 @@ main {
 }
 
 
-/* Opening全体がゆっくり消える */
+/* Openingをゆっくり消す */
 
 @keyframes openingFadeOut {
 
     0% {
         opacity: 1;
-        visibility: visible;
+    }
+
+    70% {
+        opacity: 1;
     }
 
     100% {
         opacity: 0;
-        visibility: hidden;
         pointer-events: none;
     }
 
