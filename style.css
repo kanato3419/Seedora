@@ -1077,128 +1077,204 @@ img {
     }
 
 }
+
 /* ==============================
-   BUSINESS
+   Business
 ============================== */
 
 .home-business {
-    padding: 130px 7.5%;
-
-    background: #fff;
+    width: 100%;
+    padding: 120px 6% 130px;
+    background: #ffffff;
 }
 
-
-.home-business-heading {
-    max-width: 1150px;
-
-    margin: 0 auto 60px;
+.business-header {
+    margin-bottom: 65px;
 }
 
-
-.home-business-heading h2 {
-    margin: 0 0 25px;
-
+.business-header .section-label {
+    margin: 0 0 20px;
     font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 36px;
-
-    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 0.15em;
+    color: #397c5b;
 }
 
-
-.home-business-heading > p:last-child {
+.business-header h2 {
     margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 4.2vw, 64px);
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: #222;
+}
 
-    color: #666;
-
-    font-size: 14px;
-
+.business-lead {
+    margin: 28px 0 0;
+    font-size: 15px;
     line-height: 2;
+    color: #444;
 }
 
 
-.business-list {
-    max-width: 1150px;
+/* ==============================
+   Business Cards
+============================== */
 
-    margin: 0 auto;
-
-    border-top: 1px solid #ddd;
-}
-
-
-.business-item {
+.business-cards {
     display: grid;
-
-    grid-template-columns: 80px 1fr 50px;
-
-    align-items: center;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
+}
 
-    padding: 38px 10px;
+.business-card {
+    border: 1px solid #dfe5df;
+    background: #f8faf8;
+    overflow: hidden;
+}
 
-    border-bottom: 1px solid #ddd;
+.business-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #eef4ef;
+}
 
+.business-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.business-card-content {
+    padding: 35px 38px 40px;
+}
+
+.business-number {
+    margin: 0 0 12px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    color: #397c5b;
+}
+
+.business-card h3 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 34px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: #222;
+}
+
+.business-category {
+    margin: 12px 0 0;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    color: #397c5b;
+}
+
+.business-description {
+    margin: 25px 0 0;
+    font-size: 14px;
+    line-height: 2;
+    color: #444;
+}
+
+.business-more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border: 1px solid #397c5b;
+    color: #397c5b;
+    text-decoration: none;
+    font-size: 13px;
+    letter-spacing: 0.08em;
     transition: 0.3s ease;
 }
 
-
-.business-item:hover {
-    padding-left: 20px;
-}
-
-
-.business-item-number {
-    font-family: Georgia, serif;
-
+.business-more span {
     font-size: 18px;
+}
 
-    color: #397c5b;
+.business-more:hover {
+    background: #397c5b;
+    color: #fff;
 }
 
 
-.business-item-content p {
-    margin: 0 0 8px;
+/* ==============================
+   Business Mobile
+============================== */
 
-    color: #397c5b;
+@media (max-width: 768px) {
 
-    font-size: 10px;
+    .home-business {
+        padding: 75px 25px 85px;
+    }
 
-    letter-spacing: 0.12em;
+    .business-header {
+        margin-bottom: 40px;
+    }
+
+    .business-header .section-label {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .business-header h2 {
+        font-size: 32px;
+        line-height: 1.5;
+    }
+
+    .business-lead {
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    /* 1列にする */
+    .business-cards {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .business-card-content {
+        padding: 28px 25px 30px;
+    }
+
+    .business-number {
+        margin-bottom: 8px;
+        font-size: 12px;
+    }
+
+    .business-card h3 {
+        font-size: 28px;
+    }
+
+    .business-category {
+        margin-top: 8px;
+        font-size: 12px;
+    }
+
+    .business-description {
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .business-more {
+        margin-top: 22px;
+        padding: 14px 18px;
+        font-size: 12px;
+    }
+
 }
-
-
-.business-item-content h3 {
-    margin: 0 0 8px;
-
-    font-family: Georgia, serif;
-
-    font-size: 28px;
-
-    font-weight: 400;
-}
-
-
-.business-item-content span {
-    color: #666;
-
-    font-size: 13px;
-
-    line-height: 1.8;
-}
-
-
-.business-item-arrow {
-    font-size: 20px;
-}
-
-
-.section-more {
-    margin-top: 45px;
-}
-
-
-
 /* ==============================
    NEWS
 ============================== */
