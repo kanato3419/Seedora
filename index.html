@@ -134,17 +134,24 @@
 
 <section class="home-about">
 
-    <div class="about-number">
-        01
-    </div>
-
-    <div class="home-about-image">
-
-        <img
-            src="images/mission.jpg"
-            alt="Seedora"
+    <picture class="home-about-image">
+        <source
+            media="(max-width: 768px)"
+            srcset="images/about-mobile.jpg"
         >
 
+        <img
+            src="images/about.jpg"
+            alt="Seedora"
+        >
+    </picture>
+
+
+    <div class="home-about-overlay"></div>
+
+
+    <div class="about-number">
+        01
     </div>
 
 
