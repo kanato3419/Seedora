@@ -568,9 +568,9 @@ img {
 
     width: 100%;
 
-    background: #fff;
+    background: #f7f7f4;
 
-    padding: 120px 7% 140px;
+    padding: 90px 6% 110px;
 
     overflow: hidden;
 }
@@ -584,7 +584,7 @@ img {
     position: absolute;
 
     top: 55px;
-    left: 7%;
+    left: 6%;
 
     font-family:
         Georgia,
@@ -595,7 +595,23 @@ img {
 
     letter-spacing: 0.12em;
 
-    color: #222;
+    color: #333;
+}
+
+
+/* ==============================
+   MAIN LAYOUT
+   PC
+============================== */
+
+.home-philosophy {
+    display: grid;
+
+    grid-template-columns: 40% 60%;
+
+    align-items: center;
+
+    column-gap: 5%;
 }
 
 
@@ -604,18 +620,21 @@ img {
 ============================== */
 
 .home-philosophy-content {
+    grid-column: 1;
+    grid-row: 1;
+
     position: relative;
 
-    width: 42%;
+    z-index: 5;
 
-    margin-left: 0;
+    padding-top: 20px;
 
-    z-index: 10;
+    max-width: 520px;
 }
 
 
 .home-philosophy-content .section-label {
-    margin: 0 0 25px;
+    margin: 0 0 22px;
 
     font-family:
         Georgia,
@@ -638,20 +657,20 @@ img {
         "Times New Roman",
         serif;
 
-    font-size: clamp(42px, 4.2vw, 68px);
+    font-size: clamp(38px, 4vw, 62px);
 
     line-height: 1.45;
 
     font-weight: 400;
 
-    color: #222;
-
     letter-spacing: 0.02em;
+
+    color: #222;
 }
 
 
 .philosophy-lead {
-    margin-top: 35px;
+    margin-top: 30px;
 
     font-size: 15px;
 
@@ -666,17 +685,16 @@ img {
 ============================== */
 
 .philosophy-more {
-
     display: flex;
 
     align-items: center;
     justify-content: space-between;
 
-    width: 320px;
+    width: 270px;
 
-    margin-top: 45px;
+    margin-top: 38px;
 
-    padding: 18px 22px;
+    padding: 17px 22px;
 
     border: 1px solid #397c5b;
 
@@ -693,9 +711,7 @@ img {
 
 
 .philosophy-more span {
-    font-size: 22px;
-
-    transition: transform 0.3s ease;
+    font-size: 20px;
 }
 
 
@@ -706,25 +722,23 @@ img {
 }
 
 
-.philosophy-more:hover span {
-    transform: translateX(5px);
-}
-
-
 /* ==============================
    IMAGE AREA
+   PC = RIGHT
 ============================== */
 
 .philosophy-images {
+    grid-column: 2;
+    grid-row: 1;
 
-    position: absolute;
+    position: relative;
 
-    top: 100px;
-    right: 7%;
+    width: 100%;
+    max-width: 760px;
 
-    width: 48%;
+    height: 560px;
 
-    height: 600px;
+    margin-left: auto;
 }
 
 
@@ -733,77 +747,85 @@ img {
 ============================== */
 
 .philosophy-image-main {
-
     position: absolute;
 
     top: 0;
     right: 0;
 
-    width: 78%;
-
-    z-index: 1;
+    width: 88%;
+    height: 410px;
 
     overflow: hidden;
+
+    z-index: 1;
 }
 
 
 .philosophy-image-main img {
-
     display: block;
 
     width: 100%;
+    height: 100%;
 
-    height: auto;
+    object-fit: cover;
 }
 
 
 /* ==============================
-   SUB IMAGES
+   LEFT SMALL IMAGE
 ============================== */
 
-.philosophy-image-sub {
-
+.philosophy-image-left {
     position: absolute;
 
-    width: 42%;
+    left: 0;
+    bottom: 20px;
 
-    z-index: 3;
+    width: 48%;
+    height: 220px;
 
     overflow: hidden;
+
+    z-index: 3;
 }
 
 
-.philosophy-image-sub img {
-
+.philosophy-image-left img {
     display: block;
 
     width: 100%;
+    height: 100%;
 
-    height: auto;
+    object-fit: cover;
 }
 
 
-/* ------------------------------
-   LEFT
------------------------------- */
-
-.philosophy-image-left {
-
-    left: 0;
-
-    top: 330px;
-}
-
-
-/* ------------------------------
-   RIGHT
------------------------------- */
+/* ==============================
+   RIGHT SMALL IMAGE
+============================== */
 
 .philosophy-image-right {
+    position: absolute;
 
     right: 0;
+    bottom: -20px;
 
-    top: 410px;
+    width: 48%;
+    height: 220px;
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+
+.philosophy-image-right img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
 }
 
 
@@ -819,129 +841,98 @@ img {
 
         flex-direction: column;
 
-        padding: 45px 25px 65px;
+        padding: 25px 0 65px;
+
+        background: #f7f7f4;
     }
 
 
-    /* ==============================
+    /* ==========================
        NUMBER
-    ============================== */
+    ========================== */
 
     .philosophy-number {
 
-        position: static;
+        position: relative;
 
-        order: 1;
+        top: auto;
+        left: auto;
 
-        margin-bottom: 15px;
+        width: calc(100% - 50px);
 
-        font-size: 13px;
+        margin: 0 auto 12px;
+
+        font-size: 14px;
     }
 
 
-    /* ==============================
+    /* ==========================
        IMAGE
-       → スマホでは最初
-    ============================== */
+    ========================== */
 
     .philosophy-images {
 
-        position: relative;
+        order: 1;
 
-        order: 2;
+        width: calc(100% - 50px);
 
-        top: auto;
-        right: auto;
+        height: 330px;
 
-        width: 100%;
-
-        height: 315px;
-
-        margin: 0;
+        margin: 0 auto;
     }
 
 
-    /* ==============================
-       MAIN IMAGE
-    ============================== */
+    /* Main */
 
     .philosophy-image-main {
-
-        position: absolute;
 
         top: 0;
         right: 0;
 
         width: 92%;
-
-        z-index: 1;
+        height: 245px;
     }
 
 
-    /* ==============================
-       LEFT IMAGE
-    ============================== */
+    /* Left */
 
     .philosophy-image-left {
 
-        position: absolute;
-
         left: 0;
-        top: 185px;
+        bottom: 0;
 
         width: 48%;
-
-        z-index: 4;
+        height: 125px;
     }
 
 
-    /* ==============================
-       RIGHT IMAGE
-    ============================== */
+    /* Right */
 
     .philosophy-image-right {
 
-        position: absolute;
-
         right: 0;
-        top: 220px;
+        bottom: -15px;
 
         width: 48%;
-
-        z-index: 4;
+        height: 125px;
     }
 
 
-    /* ==============================
-       IMAGE SIZE
-    ============================== */
-
-    .philosophy-image-main img,
-    .philosophy-image-left img,
-    .philosophy-image-right img {
-
-        display: block;
-
-        width: 100%;
-
-        height: auto;
-
-        object-fit: contain;
-    }
-
-
-    /* ==============================
+    /* ==========================
        CONTENT
-       → 画像の下
-    ============================== */
+    ========================== */
 
     .home-philosophy-content {
 
-        order: 3;
+        order: 2;
 
-        width: 100%;
+        width: calc(100% - 50px);
 
-        margin-top: 55px;
+        margin: 35px auto 0;
+
+        padding: 0;
+
+        max-width: none;
     }
 
 
@@ -949,19 +940,17 @@ img {
 
         margin-bottom: 12px;
 
-        font-size: 15px;
+        font-size: 16px;
 
-        color: #397c5b;
+        letter-spacing: 0.14em;
     }
 
 
     .home-philosophy-content h2 {
 
-        margin: 0;
+        font-size: 32px;
 
-        font-size: 34px;
-
-        line-height: 1.45;
+        line-height: 1.5;
 
         letter-spacing: 0.01em;
     }
@@ -969,7 +958,7 @@ img {
 
     .philosophy-lead {
 
-        margin-top: 20px;
+        margin-top: 18px;
 
         font-size: 13px;
 
@@ -977,9 +966,9 @@ img {
     }
 
 
-    /* ==============================
+    /* ==========================
        BUTTON
-    ============================== */
+    ========================== */
 
     .philosophy-more {
 
@@ -987,9 +976,9 @@ img {
 
         margin-top: 25px;
 
-        padding: 16px 18px;
+        padding: 17px 20px;
 
-        font-size: 12px;
+        font-size: 13px;
     }
 
 }
