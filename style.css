@@ -1805,17 +1805,18 @@ img {
     }
 
     .philosophy-image-left {
-        top: 350px;
-        left: 0;
-        width: 44%;
-        aspect-ratio: 1499 / 1049;
-    }
+    top: 390px;
+    left: 0;
+    width: 44%;
+    aspect-ratio: 1499 / 1049;
+}
 
-    .philosophy-image-right {
-        top: 390px;
-        right: 0;
-        width: 44%;
-        aspect-ratio: 1000 / 700;
+.philosophy-image-right {
+    top: 360px;
+    right: 0;
+    width: 44%;
+    aspect-ratio: 1000 / 700;
+}
     }
 
     .home-philosophy-content {
