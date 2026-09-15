@@ -1862,7 +1862,7 @@ img {
 
     .home-philosophy-content h2 {
         margin: 0 0 20px;
-        font-size: 28px;
+        font-size: 25px;
         line-height: 1.45;
         letter-spacing: 0.01em;
     }
@@ -1932,6 +1932,21 @@ img {
         white-space: normal !important;
         word-break: normal !important;
         overflow-wrap: normal !important;
+    }
+
+}
+/* Philosophy 見出しの改行をHTML指定どおりにする */
+
+.home-philosophy-content h2 {
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+    .home-philosophy-content h2 {
+        font-size: 30px !important;
+        line-height: 1.5 !important;
+        white-space: nowrap !important;
     }
 
 }
