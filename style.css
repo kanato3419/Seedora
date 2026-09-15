@@ -1079,42 +1079,51 @@ img {
 }
 
 /* ==============================
-   Business
+   BUSINESS
 ============================== */
 
 .home-business {
     width: 100%;
-    padding: 120px 6% 130px;
+    padding: 100px 6% 110px;
     background: #f4f7f3;
 }
 
+/* ==============================
+   Heading
+============================== */
+
 .business-header {
-    margin-bottom: 65px;
+    max-width: 1100px;
+    margin: 0 auto 50px;
 }
 
 .business-header .section-label {
-    margin: 0 0 20px;
+    margin: 0 0 18px;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.15em;
+
     color: #397c5b;
 }
 
 .business-header h2 {
     margin: 0;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(42px, 4.2vw, 64px);
+    font-size: 46px;
     line-height: 1.4;
     font-weight: 400;
-    letter-spacing: 0.02em;
+
     color: #222;
 }
 
 .business-lead {
-    margin: 28px 0 0;
-    font-size: 15px;
+    margin: 22px 0 0;
+
+    color: #666;
+    font-size: 14px;
     line-height: 2;
-    color: #444;
 }
 
 
@@ -1123,83 +1132,146 @@ img {
 ============================== */
 
 .business-cards {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
+
+    gap: 28px;
 }
 
+
+/* カード */
+
 .business-card {
-    border: 1px solid #dfe5df;
-    background: #f8faf8;
+    width: 100%;
+
+    border: 1px solid #ddd;
+
+    background: #fff;
+
     overflow: hidden;
+
+    transition: 0.3s ease;
 }
+
+.business-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ==============================
+   Image
+============================== */
 
 .business-image {
     width: 100%;
+
     aspect-ratio: 16 / 9;
+
     overflow: hidden;
-    background: #eef4ef;
 }
 
 .business-image img {
     display: block;
+
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
+    transition: transform 0.5s ease;
 }
 
+.business-card:hover .business-image img {
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   Card Content
+============================== */
+
 .business-card-content {
-    padding: 35px 38px 40px;
+    padding: 28px 30px 32px;
 }
 
 .business-number {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
+
     font-family: Georgia, "Times New Roman", serif;
     font-size: 13px;
+
     letter-spacing: 0.12em;
+
     color: #397c5b;
 }
 
 .business-card h3 {
     margin: 0;
+
     font-family: Georgia, "Times New Roman", serif;
-    font-size: 34px;
+    font-size: 30px;
+
     font-weight: 400;
-    letter-spacing: 0.03em;
+
     color: #222;
 }
 
 .business-category {
-    margin: 12px 0 0;
-    font-size: 13px;
-    letter-spacing: 0.08em;
+    margin: 9px 0 0;
+
     color: #397c5b;
+
+    font-size: 12px;
+
+    letter-spacing: 0.08em;
 }
 
 .business-description {
-    margin: 25px 0 0;
-    font-size: 14px;
-    line-height: 2;
-    color: #444;
+    margin: 18px 0 0;
+
+    color: #555;
+
+    font-size: 13px;
+
+    line-height: 1.9;
 }
+
+
+/* ==============================
+   More Button
+============================== */
 
 .business-more {
     display: flex;
+
     align-items: center;
     justify-content: space-between;
+
     width: 100%;
-    margin-top: 30px;
-    padding: 16px 20px;
+
+    margin-top: 25px;
+
+    padding: 13px 17px;
+
     border: 1px solid #397c5b;
+
     color: #397c5b;
+
     text-decoration: none;
-    font-size: 13px;
+
+    font-size: 12px;
+
     letter-spacing: 0.08em;
+
     transition: 0.3s ease;
 }
 
 .business-more span {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 .business-more:hover {
@@ -1209,21 +1281,21 @@ img {
 
 
 /* ==============================
-   Business Mobile
+   Mobile
 ============================== */
 
 @media (max-width: 768px) {
 
     .home-business {
-        padding: 75px 25px 85px;
+        padding: 70px 25px 80px;
     }
 
     .business-header {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
     }
 
     .business-header .section-label {
-        margin-bottom: 12px;
+        margin-bottom: 10px;
         font-size: 14px;
     }
 
@@ -1233,45 +1305,50 @@ img {
     }
 
     .business-lead {
-        margin-top: 18px;
+        margin-top: 16px;
         font-size: 12px;
         line-height: 1.9;
     }
 
-    /* 1列にする */
+
+    /* スマホは1枚ずつ */
+
     .business-cards {
+        display: grid;
+
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
+
     .business-card-content {
-        padding: 28px 25px 30px;
+        padding: 25px 22px 28px;
     }
 
     .business-number {
-        margin-bottom: 8px;
         font-size: 12px;
     }
 
     .business-card h3 {
-        font-size: 28px;
+        font-size: 27px;
     }
 
     .business-category {
-        margin-top: 8px;
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .business-description {
-        margin-top: 18px;
         font-size: 12px;
         line-height: 1.9;
     }
 
     .business-more {
-        margin-top: 22px;
-        padding: 14px 18px;
-        font-size: 12px;
+        margin-top: 20px;
+
+        padding: 13px 16px;
+
+        font-size: 11px;
     }
 
 }
