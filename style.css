@@ -1881,3 +1881,30 @@ img {
     }
 
 }
+@media (max-width: 768px) {
+
+    /* Philosophy：文字だけ調整 */
+    .philosophy-heading h2 {
+        font-size: 24px !important;
+        line-height: 1.4 !important;
+        margin: 0 0 20px !important;
+        letter-spacing: 0.01em !important;
+    }
+
+    .philosophy-heading .section-label {
+        font-size: 13px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .philosophy-content p {
+        font-size: 12px !important;
+        line-height: 1.7 !important;
+    }
+
+    .philosophy-more {
+        margin-top: 18px !important;
+        padding: 14px 18px !important;
+        font-size: 12px !important;
+    }
+
+}
