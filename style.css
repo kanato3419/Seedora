@@ -1501,33 +1501,29 @@ img {
     }
 
 
-    /* PHILOSOPHY */
-
-    .home-philosophy {
-        padding: 85px 7%;
-    }
-
-
-    .philosophy-inner {
-        display: block;
-    }
-
-
-    .philosophy-heading h2 {
-        font-size: 28px;
-
-        line-height: 1.75;
-
-        margin-bottom: 40px;
-    }
-
-
-    .philosophy-content p {
-        font-size: 13px;
-
-        line-height: 2.1;
-    }
-
+  /* PHILOSOPHY */ 
+ 
+.home-philosophy { 
+    padding: 85px 7%; 
+} 
+ 
+.philosophy-inner { 
+    display: block; 
+} 
+ 
+.philosophy-heading h2 { 
+    font-size: 28px; 
+ 
+    line-height: 1.75; 
+ 
+    margin-bottom: 40px; 
+} 
+ 
+.philosophy-content p { 
+    font-size: 13px; 
+ 
+    line-height: 2.1; 
+}
 
     /* BUSINESS */
 
