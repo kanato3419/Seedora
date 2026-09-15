@@ -721,10 +721,8 @@ img {
     color: #fff;
 }
 
-
 /* ==============================
-   IMAGE AREA
-   PC = RIGHT
+   PHILOSOPHY IMAGE AREA - PC
 ============================== */
 
 .philosophy-images {
@@ -736,7 +734,7 @@ img {
     width: 100%;
     max-width: 760px;
 
-    height: 650px;
+    height: 600px;
 
     margin-left: auto;
 }
@@ -752,14 +750,13 @@ img {
     top: 0;
     right: 0;
 
-    width: 88%;
-    height: 410px;
+    width: 86%;
+    height: 390px;
 
     overflow: hidden;
 
-    z-index: 1;
+    z-index: 2;
 }
-
 
 .philosophy-image-main img {
     display: block;
@@ -772,23 +769,22 @@ img {
 
 
 /* ==============================
-   LEFT SMALL IMAGE
+   LEFT IMAGE
 ============================== */
 
-.philosophy-image-right {
+.philosophy-image-left {
     position: absolute;
 
-    right: 0;
-    bottom: 0;
+    left: 0;
+    bottom: 25px;
 
-    width: 48%;
-    height: 220px;
+    width: 46%;
+    height: 210px;
 
     overflow: hidden;
 
     z-index: 3;
 }
-
 
 .philosophy-image-left img {
     display: block;
@@ -801,23 +797,22 @@ img {
 
 
 /* ==============================
-   RIGHT SMALL IMAGE
+   RIGHT IMAGE
 ============================== */
 
 .philosophy-image-right {
     position: absolute;
 
     right: 0;
-    bottom: -20px;
+    bottom: -5px;
 
-    width: 48%;
-    height: 220px;
+    width: 46%;
+    height: 210px;
 
     overflow: hidden;
 
     z-index: 3;
 }
-
 
 .philosophy-image-right img {
     display: block;
