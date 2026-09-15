@@ -815,6 +815,10 @@ img {
 
     .home-philosophy {
 
+        display: flex;
+
+        flex-direction: column;
+
         padding: 45px 25px 65px;
     }
 
@@ -827,6 +831,8 @@ img {
 
         position: static;
 
+        order: 1;
+
         margin-bottom: 15px;
 
         font-size: 13px;
@@ -834,12 +840,15 @@ img {
 
 
     /* ==============================
-       IMAGE AREA
+       IMAGE
+       → スマホでは最初
     ============================== */
 
     .philosophy-images {
 
         position: relative;
+
+        order: 2;
 
         top: auto;
         right: auto;
@@ -849,7 +858,6 @@ img {
         height: 315px;
 
         margin: 0;
-
     }
 
 
@@ -859,10 +867,14 @@ img {
 
     .philosophy-image-main {
 
+        position: absolute;
+
         top: 0;
         right: 0;
 
         width: 92%;
+
+        z-index: 1;
     }
 
 
@@ -871,6 +883,8 @@ img {
     ============================== */
 
     .philosophy-image-left {
+
+        position: absolute;
 
         left: 0;
         top: 185px;
@@ -887,6 +901,8 @@ img {
 
     .philosophy-image-right {
 
+        position: absolute;
+
         right: 0;
         top: 220px;
 
@@ -897,10 +913,31 @@ img {
 
 
     /* ==============================
+       IMAGE SIZE
+    ============================== */
+
+    .philosophy-image-main img,
+    .philosophy-image-left img,
+    .philosophy-image-right img {
+
+        display: block;
+
+        width: 100%;
+
+        height: auto;
+
+        object-fit: contain;
+    }
+
+
+    /* ==============================
        CONTENT
+       → 画像の下
     ============================== */
 
     .home-philosophy-content {
+
+        order: 3;
 
         width: 100%;
 
@@ -913,10 +950,14 @@ img {
         margin-bottom: 12px;
 
         font-size: 15px;
+
+        color: #397c5b;
     }
 
 
     .home-philosophy-content h2 {
+
+        margin: 0;
 
         font-size: 34px;
 
