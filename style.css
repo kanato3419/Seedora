@@ -559,28 +559,32 @@ img {
 
 }
 
-/* ==============================
+/* ==================================================
    PHILOSOPHY
-============================== */
+================================================== */
 
 .home-philosophy {
+
     position: relative;
+
     width: 100%;
-    min-height: 780px;
 
-    padding: 90px 6% 100px;
+    min-height: 850px;
 
-    background: #f5f7f3;
+    padding: 100px 6% 110px;
+
+    background: #f4f7f3;
 
     overflow: hidden;
 }
 
 
-/* ==============================
+/* ==================================================
    NUMBER
-============================== */
+================================================== */
 
 .philosophy-number {
+
     position: absolute;
 
     top: 35px;
@@ -592,6 +596,7 @@ img {
         serif;
 
     font-size: 16px;
+
     letter-spacing: 0.12em;
 
     color: #333;
@@ -600,40 +605,47 @@ img {
 }
 
 
-/* ==============================
+/* ==================================================
    IMAGE AREA
-============================== */
+   PC：右側
+================================================== */
 
 .philosophy-images {
+
     position: absolute;
 
-    top: 70px;
+    top: 90px;
     right: 5%;
 
     width: 52%;
+
     height: 650px;
+
+    z-index: 2;
 }
 
 
-/* ==============================
+/* ==================================================
    MAIN IMAGE
-============================== */
+================================================== */
 
 .philosophy-image-main {
+
     position: absolute;
 
     top: 0;
     right: 0;
 
-    width: 78%;
+    width: 82%;
+
     aspect-ratio: 3 / 2;
 
     overflow: hidden;
-
-    z-index: 2;
 }
 
+
 .philosophy-image-main img {
+
     display: block;
 
     width: 100%;
@@ -643,17 +655,19 @@ img {
 }
 
 
-/* ==============================
-   LEFT SUB IMAGE
-============================== */
+/* ==================================================
+   LEFT SMALL IMAGE
+================================================== */
 
 .philosophy-image-left {
+
     position: absolute;
 
-    left: 0;
     top: 245px;
+    left: 0;
 
     width: 43%;
+
     aspect-ratio: 1499 / 1049;
 
     overflow: hidden;
@@ -662,31 +676,8 @@ img {
 }
 
 
-/* ==============================
-   RIGHT SUB IMAGE
-============================== */
+.philosophy-image-left img {
 
-.philosophy-image-right {
-    position: absolute;
-
-    right: 2%;
-    top: 405px;
-
-    width: 43%;
-    aspect-ratio: 1000 / 700;
-
-    overflow: hidden;
-
-    z-index: 4;
-}
-
-
-/* ==============================
-   SUB IMAGE COMMON
-============================== */
-
-.philosophy-image-left img,
-.philosophy-image-right img {
     display: block;
 
     width: 100%;
@@ -696,30 +687,64 @@ img {
 }
 
 
-/* ==============================
-   CONTENT
-============================== */
+/* ==================================================
+   RIGHT SMALL IMAGE
+================================================== */
 
-.home-philosophy-content {
-    position: relative;
+.philosophy-image-right {
 
-    z-index: 10;
+    position: absolute;
+
+    top: 410px;
+    right: 0;
 
     width: 43%;
-    max-width: 600px;
 
-    margin: 0;
+    aspect-ratio: 1000 / 700;
 
-    padding-top: 80px;
+    overflow: hidden;
+
+    z-index: 4;
 }
 
 
-/* ==============================
+.philosophy-image-right img {
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* ==================================================
+   CONTENT
+   PC：左側
+================================================== */
+
+.home-philosophy-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 43%;
+
+    max-width: 600px;
+
+    padding-top: 65px;
+}
+
+
+/* ==================================================
    LABEL
-============================== */
+================================================== */
 
 .home-philosophy-content .section-label {
-    margin: 0 0 22px;
+
+    margin: 0 0 20px;
 
     font-family:
         Georgia,
@@ -728,17 +753,18 @@ img {
 
     font-size: 20px;
 
-    letter-spacing: 0.16em;
+    letter-spacing: 0.15em;
 
     color: #397c5b;
 }
 
 
-/* ==============================
+/* ==================================================
    HEADING
-============================== */
+================================================== */
 
 .home-philosophy-content h2 {
+
     margin: 0;
 
     font-family:
@@ -758,12 +784,13 @@ img {
 }
 
 
-/* ==============================
+/* ==================================================
    LEAD
-============================== */
+================================================== */
 
 .philosophy-lead {
-    margin-top: 30px;
+
+    margin: 30px 0 0;
 
     font-size: 15px;
 
@@ -773,23 +800,27 @@ img {
 }
 
 
-/* ==============================
+/* ==================================================
    BUTTON
-============================== */
+================================================== */
 
 .philosophy-more {
+
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     width: 310px;
 
-    margin-top: 40px;
+    margin-top: 38px;
 
     padding: 18px 25px;
 
     border: 1px solid #397c5b;
+
+    background: rgba(255,255,255,0.35);
 
     color: #397c5b;
 
@@ -799,58 +830,73 @@ img {
 
     letter-spacing: 0.08em;
 
-    background: rgba(255,255,255,0.45);
-
     transition: 0.3s ease;
 }
 
+
+.philosophy-more span {
+
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+
 .philosophy-more:hover {
+
     background: #397c5b;
+
     color: #fff;
 }
 
-.philosophy-more span {
-    font-size: 21px;
-}
 
-/* ==============================
-   MOBILE PHILOSOPHY
-============================== */
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media (max-width: 768px) {
 
+
+    /* ------------------------------------------
+       SECTION
+    ------------------------------------------ */
+
     .home-philosophy {
+
         width: 100%;
+
         min-height: auto;
 
         padding: 0 25px 60px;
 
-        background: #f5f7f3;
+        background: #f4f7f3;
 
         overflow: hidden;
     }
 
 
-    /* ==============================
+    /* ------------------------------------------
        NUMBER
-    ============================== */
+    ------------------------------------------ */
 
     .philosophy-number {
+
         position: relative;
 
         top: auto;
         left: auto;
 
         padding-top: 8px;
+
         margin-bottom: 8px;
 
         font-size: 13px;
     }
 
 
-    /* ==============================
+    /* ------------------------------------------
        IMAGE AREA
-    ============================== */
+    ------------------------------------------ */
 
     .philosophy-images {
 
@@ -858,9 +904,9 @@ img {
 
         top: auto;
         right: auto;
-        left: auto;
 
         width: 100%;
+
         height: 315px;
 
         margin: 0;
@@ -869,9 +915,9 @@ img {
     }
 
 
-    /* ==============================
-       MAIN IMAGE
-    ============================== */
+    /* ------------------------------------------
+       MAIN
+    ------------------------------------------ */
 
     .philosophy-image-main {
 
@@ -879,14 +925,10 @@ img {
 
         top: 0;
         right: 0;
-        left: auto;
 
         width: 92%;
-        height: auto;
 
         aspect-ratio: 3 / 2;
-
-        margin: 0;
 
         overflow: hidden;
 
@@ -894,9 +936,9 @@ img {
     }
 
 
-    /* ==============================
-       LEFT IMAGE
-    ============================== */
+    /* ------------------------------------------
+       LEFT
+    ------------------------------------------ */
 
     .philosophy-image-left {
 
@@ -904,22 +946,20 @@ img {
 
         top: 195px;
         left: 0;
-        right: auto;
 
         width: 48%;
-        height: auto;
 
         aspect-ratio: 1499 / 1049;
 
-        margin: 0;
+        overflow: hidden;
 
         z-index: 4;
     }
 
 
-    /* ==============================
-       RIGHT IMAGE
-    ============================== */
+    /* ------------------------------------------
+       RIGHT
+    ------------------------------------------ */
 
     .philosophy-image-right {
 
@@ -927,22 +967,20 @@ img {
 
         top: 225px;
         right: 0;
-        left: auto;
 
         width: 48%;
-        height: auto;
 
         aspect-ratio: 1000 / 700;
 
-        margin: 0;
+        overflow: hidden;
 
         z-index: 4;
     }
 
 
-    /* ==============================
-       IMAGE ITSELF
-    ============================== */
+    /* ------------------------------------------
+       IMAGES
+    ------------------------------------------ */
 
     .philosophy-image-main img,
     .philosophy-image-left img,
@@ -957,9 +995,9 @@ img {
     }
 
 
-    /* ==============================
-       TEXT
-    ============================== */
+    /* ------------------------------------------
+       CONTENT
+    ------------------------------------------ */
 
     .home-philosophy-content {
 
@@ -968,6 +1006,7 @@ img {
         z-index: 10;
 
         width: 100%;
+
         max-width: none;
 
         margin: 35px 0 0;
@@ -976,15 +1015,25 @@ img {
     }
 
 
+    /* ------------------------------------------
+       LABEL
+    ------------------------------------------ */
+
     .home-philosophy-content .section-label {
 
         margin: 0 0 10px;
 
         font-size: 14px;
 
+        letter-spacing: 0.15em;
+
         color: #397c5b;
     }
 
+
+    /* ------------------------------------------
+       HEADING
+    ------------------------------------------ */
 
     .home-philosophy-content h2 {
 
@@ -998,6 +1047,10 @@ img {
     }
 
 
+    /* ------------------------------------------
+       LEAD
+    ------------------------------------------ */
+
     .philosophy-lead {
 
         margin-top: 15px;
@@ -1008,9 +1061,9 @@ img {
     }
 
 
-    /* ==============================
+    /* ------------------------------------------
        BUTTON
-    ============================== */
+    ------------------------------------------ */
 
     .philosophy-more {
 
@@ -1024,7 +1077,6 @@ img {
     }
 
 }
-
 /* ==============================
    BUSINESS
 ============================== */
