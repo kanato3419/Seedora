@@ -1910,11 +1910,28 @@ img {
 }
 @media (max-width: 768px) {
 
-    .home-philosophy h2 {
+    .home-philosophy-content {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .home-philosophy-content h2 {
+        display: block !important;
+        width: 100% !important;
+        max-width: none !important;
+
         font-size: 30px !important;
-        line-height: 1.55 !important;
-        letter-spacing: 0.01em !important;
+        line-height: 1.45 !important;
+        letter-spacing: 0 !important;
+
         margin: 0 0 28px !important;
+        padding: 0 !important;
+
+        white-space: normal !important;
+        word-break: normal !important;
+        overflow-wrap: normal !important;
     }
 
 }
