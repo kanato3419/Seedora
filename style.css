@@ -813,25 +813,27 @@ img {
     font-size: 21px;
 }
 
-
 /* ==============================
-   MOBILE
+   MOBILE PHILOSOPHY
 ============================== */
 
 @media (max-width: 768px) {
 
     .home-philosophy {
+        width: 100%;
         min-height: auto;
 
         padding: 0 25px 60px;
 
         background: #f5f7f3;
+
+        overflow: hidden;
     }
 
 
-    /* ------------------------------
-       Number
-    ------------------------------ */
+    /* ==============================
+       NUMBER
+    ============================== */
 
     .philosophy-number {
         position: relative;
@@ -846,78 +848,147 @@ img {
     }
 
 
-    /* ------------------------------
-       Images
-    ------------------------------ */
+    /* ==============================
+       IMAGE AREA
+    ============================== */
 
     .philosophy-images {
+
         position: relative;
 
         top: auto;
         right: auto;
+        left: auto;
 
         width: 100%;
-
         height: 315px;
 
         margin: 0;
+
+        display: block;
     }
 
+
+    /* ==============================
+       MAIN IMAGE
+    ============================== */
 
     .philosophy-image-main {
+
+        position: absolute;
+
         top: 0;
         right: 0;
+        left: auto;
 
         width: 92%;
+        height: auto;
 
         aspect-ratio: 3 / 2;
+
+        margin: 0;
+
+        overflow: hidden;
+
+        z-index: 2;
     }
 
+
+    /* ==============================
+       LEFT IMAGE
+    ============================== */
 
     .philosophy-image-left {
-        left: 0;
+
+        position: absolute;
+
         top: 195px;
+        left: 0;
+        right: auto;
 
         width: 48%;
+        height: auto;
 
         aspect-ratio: 1499 / 1049;
+
+        margin: 0;
+
+        z-index: 4;
     }
 
+
+    /* ==============================
+       RIGHT IMAGE
+    ============================== */
 
     .philosophy-image-right {
-        right: 0;
+
+        position: absolute;
+
         top: 225px;
+        right: 0;
+        left: auto;
 
         width: 48%;
+        height: auto;
 
         aspect-ratio: 1000 / 700;
+
+        margin: 0;
+
+        z-index: 4;
     }
 
 
-    /* ------------------------------
-       Content
-    ------------------------------ */
+    /* ==============================
+       IMAGE ITSELF
+    ============================== */
+
+    .philosophy-image-main img,
+    .philosophy-image-left img,
+    .philosophy-image-right img {
+
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+
+
+    /* ==============================
+       TEXT
+    ============================== */
 
     .home-philosophy-content {
+
+        position: relative;
+
+        z-index: 10;
 
         width: 100%;
         max-width: none;
 
         margin: 35px 0 0;
 
-        padding-top: 0;
+        padding: 0;
     }
 
 
     .home-philosophy-content .section-label {
 
-        margin-bottom: 10px;
+        margin: 0 0 10px;
 
         font-size: 14px;
+
+        color: #397c5b;
     }
 
 
     .home-philosophy-content h2 {
+
+        margin: 0;
 
         font-size: 32px;
 
@@ -937,9 +1008,9 @@ img {
     }
 
 
-    /* ------------------------------
-       Button
-    ------------------------------ */
+    /* ==============================
+       BUTTON
+    ============================== */
 
     .philosophy-more {
 
@@ -953,6 +1024,7 @@ img {
     }
 
 }
+
 /* ==============================
    BUSINESS
 ============================== */
