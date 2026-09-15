@@ -736,7 +736,7 @@ img {
     width: 100%;
     max-width: 760px;
 
-    height: 560px;
+    height: 650px;
 
     margin-left: auto;
 }
@@ -775,11 +775,11 @@ img {
    LEFT SMALL IMAGE
 ============================== */
 
-.philosophy-image-left {
+.philosophy-image-right {
     position: absolute;
 
-    left: 0;
-    bottom: 20px;
+    right: 0;
+    bottom: 0;
 
     width: 48%;
     height: 220px;
