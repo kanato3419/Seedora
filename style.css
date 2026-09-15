@@ -1807,14 +1807,14 @@ img {
     .philosophy-image-left {
     top: 390px;
     left: 0;
-    width: 60%;
+    width: 55%;
     aspect-ratio: 1499 / 1049;
 }
 
 .philosophy-image-right {
     top: 360px;
     right: 0;
-    width: 50%;
+    width: 45%;
     aspect-ratio: 1000 / 700;
 }
     }
