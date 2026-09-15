@@ -1501,28 +1501,164 @@ img {
     }
 
 
-  /* PHILOSOPHY */ 
- 
-.home-philosophy { 
-    padding: 85px 7%; 
-} 
- 
-.philosophy-inner { 
-    display: block; 
-} 
- 
-.philosophy-heading h2 { 
-    font-size: 28px; 
- 
-    line-height: 1.75; 
- 
-    margin-bottom: 40px; 
-} 
- 
-.philosophy-content p { 
-    font-size: 13px; 
- 
-    line-height: 2.1; 
+/* ==============================
+   PHILOSOPHY
+   MOBILE
+============================== */
+
+@media (max-width: 768px) {
+
+    .home-philosophy {
+        padding: 50px 25px 65px;
+    }
+
+
+    /* ------------------------------
+       全体
+    ------------------------------ */
+
+    .philosophy-inner {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* ------------------------------
+       画像
+       スマホでは必ず上
+    ------------------------------ */
+
+    .philosophy-images {
+        order: 1;
+
+        position: relative;
+
+        width: 100%;
+        height: 315px;
+
+        margin-bottom: 35px;
+    }
+
+
+    /* メイン画像 */
+
+    .philosophy-image-main {
+        position: absolute;
+
+        top: 0;
+        right: 0;
+
+        width: 92%;
+        height: 235px;
+
+        overflow: hidden;
+    }
+
+
+    /* 左下 */
+
+    .philosophy-image-left {
+        position: absolute;
+
+        left: 0;
+        bottom: 0;
+
+        width: 48%;
+        height: 125px;
+
+        z-index: 3;
+    }
+
+
+    /* 右下 */
+
+    .philosophy-image-right {
+        position: absolute;
+
+        right: 0;
+        bottom: -5px;
+
+        width: 48%;
+        height: 125px;
+
+        z-index: 3;
+    }
+
+
+    /* 画像を切らない */
+
+    .philosophy-image-main img,
+    .philosophy-image-left img,
+    .philosophy-image-right img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        object-fit: contain;
+    }
+
+
+    /* ------------------------------
+       文章
+       スマホでは画像の下
+    ------------------------------ */
+
+    .home-philosophy-content {
+        order: 2;
+
+        margin: 0;
+
+        max-width: none;
+    }
+
+
+    .philosophy-heading .section-label {
+        margin-bottom: 10px;
+
+        font-size: 14px;
+
+        color: #397c5b;
+    }
+
+
+    .philosophy-heading h2 {
+
+        font-size: 30px;
+
+        line-height: 1.55;
+
+        margin: 0 0 28px;
+
+        letter-spacing: 0.02em;
+    }
+
+
+    .philosophy-content p {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* ------------------------------
+       ボタン
+    ------------------------------ */
+
+    .philosophy-more {
+
+        width: 100%;
+
+        margin-top: 25px;
+
+        padding: 15px 18px;
+
+        font-size: 12px;
+    }
+
 }
 
     /* BUSINESS */
