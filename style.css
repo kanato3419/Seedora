@@ -1842,3 +1842,42 @@ img {
     }
 
 }
+/* =========================================
+   Philosophy｜スマホ文字調整
+   ※画像の位置・サイズは一切変更しない
+========================================= */
+
+@media (max-width: 768px) {
+
+    .home-philosophy-content {
+        margin: 0;
+        padding: 0;
+    }
+
+    .home-philosophy-content .section-label {
+        margin: 0 0 14px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .home-philosophy-content h2 {
+        margin: 0 0 20px;
+        font-size: 28px;
+        line-height: 1.45;
+        letter-spacing: 0.01em;
+    }
+
+    .philosophy-lead {
+        margin: 0 0 20px;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .philosophy-more {
+        width: 100%;
+        margin-top: 0;
+        padding: 15px 18px;
+        font-size: 12px;
+    }
+
+}
