@@ -1800,21 +1800,21 @@ img {
     .philosophy-image-main {
         top: 0;
         right: 0;
-        width: 78%;
+        width: 84%;
         aspect-ratio: 3 / 2;
     }
 
     .philosophy-image-left {
     top: 390px;
     left: 0;
-    width: 44%;
+    width: 50%;
     aspect-ratio: 1499 / 1049;
 }
 
 .philosophy-image-right {
     top: 360px;
     right: 0;
-    width: 44%;
+    width: 50%;
     aspect-ratio: 1000 / 700;
 }
     }
