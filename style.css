@@ -1777,3 +1777,67 @@ img {
     }
 
 }
+/* =========================================
+   PC版 Philosophy 調整
+   スマホには影響させない
+========================================= */
+
+@media (min-width: 769px) {
+
+    .home-philosophy {
+        min-height: 820px;
+        padding: 100px 6% 100px;
+    }
+
+    .philosophy-images {
+        top: 105px;
+        right: 6%;
+        width: 48%;
+        max-width: 680px;
+        height: 610px;
+    }
+
+    .philosophy-image-main {
+        top: 0;
+        right: 0;
+        width: 78%;
+        aspect-ratio: 3 / 2;
+    }
+
+    .philosophy-image-left {
+        top: 350px;
+        left: 0;
+        width: 44%;
+        aspect-ratio: 1499 / 1049;
+    }
+
+    .philosophy-image-right {
+        top: 390px;
+        right: 0;
+        width: 44%;
+        aspect-ratio: 1000 / 700;
+    }
+
+    .home-philosophy-content {
+        width: 42%;
+        max-width: 560px;
+        padding-top: 85px;
+    }
+
+    .home-philosophy-content h2 {
+        font-size: clamp(42px, 4vw, 60px);
+        line-height: 1.45;
+    }
+
+    .philosophy-lead {
+        margin-top: 28px;
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .philosophy-more {
+        width: 300px;
+        margin-top: 36px;
+    }
+
+}
