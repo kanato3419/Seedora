@@ -2122,29 +2122,70 @@ img {
 
 }
 
-/* ==============================
+/* =========================================================
    ABOUT PAGE
-============================== */
+   Seedora Editorial Design
+========================================================= */
 
 
-/* ==============================
-   About Hero
-============================== */
+/* =========================================================
+   ABOUT HERO
+========================================================= */
 
 .about-hero {
-    min-height: 620px;
+    position: relative;
+    min-height: 650px;
 
-    padding: 150px 7.5% 100px;
+    padding: 120px 7.5% 100px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    background: #f4f7f3;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(244, 247, 243, 0.96) 0%,
+            rgba(244, 247, 243, 0.88) 38%,
+            rgba(244, 247, 243, 0.15) 75%,
+            rgba(244, 247, 243, 0) 100%
+        ),
+        #dfe9df;
+}
+
+
+/* 後からHero画像を入れる場所 */
+
+.about-hero::after {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 58%;
+    height: 100%;
+
+    background: #d5e2d7;
+
+    z-index: 0;
+}
+
+
+/* Hero文字 */
+
+.about-hero-label,
+.about-hero h1,
+.about-hero-lead {
+    position: relative;
+    z-index: 2;
 }
 
 .about-hero-label {
-    margin: 0 0 22px;
+    margin: 0 0 20px;
 
     font-family: Georgia, "Times New Roman", serif;
 
@@ -2160,11 +2201,11 @@ img {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(56px, 7vw, 100px);
+    font-size: clamp(58px, 7vw, 100px);
 
     font-weight: 400;
 
-    line-height: 1.2;
+    line-height: 1.15;
 
     letter-spacing: 0.02em;
 
@@ -2172,7 +2213,7 @@ img {
 }
 
 .about-hero-lead {
-    margin: 35px 0 0;
+    margin: 32px 0 0;
 
     font-size: 15px;
 
@@ -2182,9 +2223,9 @@ img {
 }
 
 
-/* ==============================
-   Common Section
-============================== */
+/* =========================================================
+   COMMON
+========================================================= */
 
 .about-intro,
 .about-why,
@@ -2192,32 +2233,33 @@ img {
 .about-profile {
     position: relative;
 
-    padding: 130px 7.5%;
-
-    background: #fff;
+    padding: 140px 7.5%;
 }
 
 .about-section-number {
     position: absolute;
 
-    top: 45px;
+    top: 50px;
     left: 7.5%;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 14px;
+    font-size: 13px;
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.2em;
 
     color: #397c5b;
 }
 
-.section-label {
-    margin: 0 0 20px;
+.about-intro .section-label,
+.about-why .section-label,
+.about-founder .section-label,
+.about-profile .section-label {
+    margin: 0 0 18px;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 18px;
+    font-size: 15px;
 
     letter-spacing: 0.15em;
 
@@ -2225,37 +2267,37 @@ img {
 }
 
 
-/* ==============================
-   Intro
-============================== */
+/* =========================================================
+   01 WHAT IS SEEDORA
+========================================================= */
 
 .about-intro {
     background: #fff;
 }
 
 .about-intro-content {
-    max-width: 1050px;
+    max-width: 1150px;
 
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 0.9fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    gap: 100px;
+    gap: 90px;
 
-    align-items: start;
+    align-items: center;
 }
 
-.about-intro-content h2,
-.about-why-content h2,
-.about-founder-content h2,
-.about-profile-content h2 {
+
+/* 左側 */
+
+.about-intro-content h2 {
     margin: 0;
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(38px, 4.5vw, 60px);
+    font-size: clamp(42px, 4.5vw, 62px);
 
     font-weight: 400;
 
@@ -2267,11 +2309,13 @@ img {
 }
 
 .about-text {
-    padding-top: 55px;
+    margin-top: 45px;
+
+    max-width: 470px;
 }
 
 .about-text p {
-    margin: 0 0 25px;
+    margin: 0 0 22px;
 
     font-size: 14px;
 
@@ -2285,36 +2329,103 @@ img {
 }
 
 
-/* ==============================
-   Why Seedora
-============================== */
+/* 右側画像スペース */
+
+.about-intro-content::after {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 3;
+
+    background: #dfe9df;
+
+    grid-column: 2;
+
+    grid-row: 1;
+}
+
+
+/* =========================================================
+   02 WHY SEEDORA
+========================================================= */
 
 .about-why {
     background: #f4f7f3;
 }
 
 .about-why-content {
-    max-width: 1050px;
+    max-width: 1150px;
 
     margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+/* 左：画像 */
+
+.about-why-content::before {
+    content: "";
+
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 4 / 5;
+
+    background: #dfe9df;
+
+    grid-column: 1;
+
+    grid-row: 1;
+}
+
+
+/* 右：文章 */
+
+.about-why-content .section-label,
+.about-why-content h2,
+.about-story {
+    grid-column: 2;
+}
+
+.about-why-content h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(40px, 4vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.5;
+
+    color: #222;
 }
 
 .about-story {
-    max-width: 650px;
+    margin-top: 40px;
 
-    margin-top: 65px;
-
-    margin-left: auto;
+    max-width: 480px;
 }
 
 .about-story p {
-    margin: 0 0 30px;
+    margin: 0 0 22px;
 
-    font-size: 15px;
+    font-size: 14px;
 
     line-height: 2.2;
 
-    color: #444;
+    color: #555;
 }
 
 .about-story p:last-child {
@@ -2322,52 +2433,74 @@ img {
 }
 
 
-/* ==============================
-   Founder
-============================== */
+/* =========================================================
+   03 FOUNDER
+========================================================= */
 
 .about-founder {
     background: #fff;
 }
 
 .about-founder-content {
-    max-width: 1050px;
+    max-width: 1150px;
 
     margin: 0 auto;
+}
+
+.about-founder-content h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(40px, 4vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    color: #222;
 }
 
 .founder-profile {
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.9fr 1.1fr;
 
-    gap: 80px;
-
-    margin-top: 65px;
+    gap: 90px;
 
     align-items: center;
+
+    margin-top: 70px;
 }
+
+
+/* Founder画像 */
 
 .founder-image {
     width: 100%;
 
     aspect-ratio: 4 / 5;
 
-    background: #f4f7f3;
+    background: #dfe9df;
 }
 
+
+/* Founder情報 */
+
 .founder-info {
-    max-width: 480px;
+    max-width: 520px;
 }
 
 .founder-role {
     margin: 0 0 12px;
 
-    color: #397c5b;
+    font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 12px;
+    font-size: 13px;
 
     letter-spacing: 0.12em;
+
+    color: #397c5b;
 }
 
 .founder-info h3 {
@@ -2375,7 +2508,7 @@ img {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: 34px;
+    font-size: 38px;
 
     font-weight: 400;
 
@@ -2387,32 +2520,51 @@ img {
 
     font-size: 14px;
 
-    line-height: 2.1;
+    line-height: 2.2;
 
     color: #555;
 }
 
 
-/* ==============================
-   Profile
-============================== */
+/* =========================================================
+   04 PROFILE
+========================================================= */
 
 .about-profile {
     background: #f4f7f3;
 }
 
 .about-profile-content {
-    max-width: 1050px;
+    max-width: 1150px;
 
     margin: 0 auto;
 }
 
+.about-profile-content h2 {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(40px, 4vw, 58px);
+
+    font-weight: 400;
+
+    line-height: 1.45;
+
+    color: #222;
+}
+
+
+/* Profileを左右に分ける */
+
 .profile-table {
-    max-width: 850px;
+    width: 100%;
 
-    margin-top: 60px;
+    max-width: 1050px;
 
-    border-top: 1px solid #cfd8d1;
+    margin-top: 65px;
+
+    border-top: 1px solid #cdd7cf;
 }
 
 .profile-row {
@@ -2420,9 +2572,9 @@ img {
 
     grid-template-columns: 180px 1fr;
 
-    padding: 22px 0;
+    padding: 20px 0;
 
-    border-bottom: 1px solid #cfd8d1;
+    border-bottom: 1px solid #cdd7cf;
 
     font-size: 14px;
 
@@ -2440,20 +2592,48 @@ img {
 }
 
 
-/* ==============================
-   Philosophy Link
-============================== */
+/* =========================================================
+   PHILOSOPHY LINK
+========================================================= */
 
 .about-philosophy-link {
+    position: relative;
+
     padding: 150px 7.5%;
 
     text-align: center;
 
     background: #fff;
+
+    overflow: hidden;
+}
+
+.about-philosophy-link::before {
+    content: "";
+
+    position: absolute;
+
+    width: 380px;
+    height: 380px;
+
+    left: -120px;
+    bottom: -180px;
+
+    border-radius: 50%;
+
+    background: #e7efe8;
+}
+
+.about-philosophy-link .section-label,
+.about-philosophy-link h2,
+.about-link {
+    position: relative;
+
+    z-index: 2;
 }
 
 .about-philosophy-link .section-label {
-    margin-bottom: 25px;
+    margin: 0 0 25px;
 }
 
 .about-philosophy-link h2 {
@@ -2461,11 +2641,13 @@ img {
 
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(38px, 5vw, 64px);
+    font-size: clamp(40px, 5vw, 68px);
 
     font-weight: 400;
 
     line-height: 1.5;
+
+    letter-spacing: 0.02em;
 
     color: #222;
 }
@@ -2476,11 +2658,11 @@ img {
     align-items: center;
     justify-content: space-between;
 
-    width: 320px;
+    width: 330px;
 
-    margin: 45px auto 0;
+    margin: 50px auto 0;
 
-    padding: 17px 22px;
+    padding: 16px 20px;
 
     border-top: 1px solid #397c5b;
 
@@ -2490,9 +2672,9 @@ img {
 
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
 
     transition: 0.3s ease;
 }
@@ -2504,24 +2686,39 @@ img {
 }
 
 .about-link:hover span {
-    transform: translateX(6px);
+    transform: translateX(7px);
 }
 
 
-/* ==============================
-   Mobile
-============================== */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 768px) {
 
+
+    /* ==============================
+       Hero
+    ============================== */
+
     .about-hero {
-        min-height: 480px;
+        min-height: 540px;
 
         padding: 110px 25px 70px;
+
+        justify-content: flex-end;
+    }
+
+    .about-hero::after {
+        width: 100%;
+        height: 58%;
+
+        top: 0;
+        right: 0;
     }
 
     .about-hero-label {
-        margin-bottom: 15px;
+        margin-bottom: 12px;
 
         font-size: 13px;
     }
@@ -2529,11 +2726,11 @@ img {
     .about-hero h1 {
         font-size: 48px;
 
-        line-height: 1.3;
+        line-height: 1.25;
     }
 
     .about-hero-lead {
-        margin-top: 25px;
+        margin-top: 22px;
 
         font-size: 12px;
 
@@ -2541,93 +2738,148 @@ img {
     }
 
 
-    /* Common */
+    /* ==============================
+       Common
+    ============================== */
 
     .about-intro,
     .about-why,
     .about-founder,
     .about-profile {
-        padding: 80px 25px;
+        padding: 85px 25px;
     }
 
     .about-section-number {
         position: static;
 
-        margin-bottom: 30px;
+        margin-bottom: 28px;
 
         font-size: 12px;
     }
 
-    .section-label {
-        margin-bottom: 12px;
 
-        font-size: 14px;
-    }
-
-
-    /* Intro */
+    /* ==============================
+       01
+    ============================== */
 
     .about-intro-content {
-        display: block;
+        display: flex;
 
-        max-width: none;
+        flex-direction: column;
+
+        gap: 35px;
     }
 
-    .about-intro-content h2,
-    .about-why-content h2,
-    .about-founder-content h2,
-    .about-profile-content h2 {
+    .about-intro-content::after {
+        order: 1;
+
+        width: 100%;
+
+        aspect-ratio: 4 / 3;
+    }
+
+    .about-intro-content > * {
+        order: 2;
+    }
+
+    .about-intro-content h2 {
         font-size: 32px;
 
         line-height: 1.5;
     }
 
     .about-text {
-        padding-top: 30px;
+        margin-top: 25px;
+
+        max-width: none;
     }
 
     .about-text p {
+        margin-bottom: 20px;
+
         font-size: 12px;
 
         line-height: 2;
-
-        margin-bottom: 20px;
     }
 
 
-    /* Why */
+    /* ==============================
+       02
+    ============================== */
+
+    .about-why-content {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .about-why-content::before {
+        order: 1;
+
+        width: 100%;
+
+        aspect-ratio: 4 / 3;
+    }
+
+    .about-why-content .section-label,
+    .about-why-content h2,
+    .about-story {
+        order: 2;
+    }
+
+    .about-why-content h2 {
+        font-size: 32px;
+
+        line-height: 1.5;
+    }
 
     .about-story {
-        max-width: none;
+        margin-top: 0;
 
-        margin: 35px 0 0;
+        max-width: none;
     }
 
     .about-story p {
-        margin-bottom: 22px;
+        margin-bottom: 20px;
 
-        font-size: 13px;
+        font-size: 12px;
 
-        line-height: 2.1;
+        line-height: 2;
     }
 
 
-    /* Founder */
+    /* ==============================
+       Founder
+    ============================== */
+
+    .about-founder-content h2 {
+        font-size: 32px;
+    }
 
     .founder-profile {
-        display: block;
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 30px;
 
         margin-top: 35px;
     }
 
     .founder-image {
-        aspect-ratio: 1 / 1;
+        width: 100%;
 
-        margin-bottom: 30px;
+        aspect-ratio: 1 / 1;
     }
 
     .founder-info {
         max-width: none;
+    }
+
+    .founder-role {
+        font-size: 11px;
     }
 
     .founder-info h3 {
@@ -2643,25 +2895,33 @@ img {
     }
 
 
-    /* Profile */
+    /* ==============================
+       Profile
+    ============================== */
+
+    .about-profile-content h2 {
+        font-size: 32px;
+    }
 
     .profile-table {
         margin-top: 35px;
     }
 
     .profile-row {
-        grid-template-columns: 100px 1fr;
+        grid-template-columns: 95px 1fr;
 
-        padding: 17px 0;
+        padding: 16px 0;
 
         font-size: 12px;
     }
 
 
-    /* Philosophy */
+    /* ==============================
+       Philosophy
+    ============================== */
 
     .about-philosophy-link {
-        padding: 90px 25px;
+        padding: 95px 25px;
     }
 
     .about-philosophy-link h2 {
@@ -2673,11 +2933,11 @@ img {
     .about-link {
         width: 100%;
 
-        margin-top: 30px;
+        margin-top: 35px;
 
         padding: 15px 18px;
 
-        font-size: 12px;
+        font-size: 11px;
     }
 
 }
